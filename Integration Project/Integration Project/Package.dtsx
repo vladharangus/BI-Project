@@ -11,15 +11,15 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="4"
-  DTS:VersionGUID="{457E669C-8328-4249-8CC0-6E143579B915}">
+  DTS:VersionBuild="33"
+  DTS:VersionGUID="{929CA89D-1BCD-4BEA-A619-79B7D043EC8A}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[DESKTOP-1NBNSDK\SQLEXPRESS.DataWarehouse]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{102B454C-5D6F-4CF4-84FF-074E2F309AED}"
+      DTS:DTSID="{FD3E8F96-069F-4159-88E0-E0FA1B99FF4F}"
       DTS:ObjectName="DESKTOP-1NBNSDK\SQLEXPRESS.DataWarehouse">
       <DTS:ObjectData>
         <DTS:ConnectionManager
@@ -27,36 +27,165 @@
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[Excel Connection Manager]"
-      DTS:CreationName="EXCEL"
-      DTS:DTSID="{1FEA0E46-EE88-442F-866D-EDCDFA9064AD}"
-      DTS:ObjectName="Excel Connection Manager">
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{AC59C92C-986B-47D2-B186-1C45C881BCD6}"
+      DTS:ObjectName="Flat File Connection Manager">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Vlad\Desktop\BI Project\archive\Books Data with Category Language and Summary\SourceFile.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[Excel Connection Manager 1]"
-      DTS:CreationName="EXCEL"
-      DTS:DTSID="{C5F44158-E43F-42C4-BB14-F0528E76D5D9}"
-      DTS:ObjectName="Excel Connection Manager 1">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Vlad\Desktop\BI Project\archive\Books Data with Category Language and Summary\SourceFile.xlsx;Extended Properties=&quot;Excel 12.0 XML;HDR=YES&quot;;" />
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x0022_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\Vlad\Desktop\BI Project\archive\Books Data with Category Language and Summary\Data2.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="129"
+              DTS:ObjectName="id"
+              DTS:DTSID="{D3E75167-31D9-446A-8F5D-E4EEE5D56CFE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="129"
+              DTS:ObjectName="user_id"
+              DTS:DTSID="{03153194-C928-4D20-8AE1-41E75E5FB2E1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="129"
+              DTS:ObjectName="isbn"
+              DTS:DTSID="{0255F56E-439D-4F06-BFB7-056392B83BA2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="129"
+              DTS:ObjectName="rating"
+              DTS:DTSID="{6F2ADFC6-7108-4082-A7A4-8F70DC31EB1A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="129"
+              DTS:ObjectName="book_title"
+              DTS:DTSID="{A1814452-6CAD-405B-9592-D529CB9FB34B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="129"
+              DTS:ObjectName="book_author"
+              DTS:DTSID="{7F16C0A1-D148-4C73-9199-D62BD6B78485}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="129"
+              DTS:ObjectName="year_of_publication"
+              DTS:DTSID="{571EFDC9-1113-4EB5-85A0-A1386D988E99}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="129"
+              DTS:ObjectName="publisher"
+              DTS:DTSID="{376E693B-EAEA-49CE-963C-46B23DD4272A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="129"
+              DTS:ObjectName="Language"
+              DTS:DTSID="{30729C63-B1A2-41C3-8AF6-C819EB5DEF6A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="129"
+              DTS:ObjectName="Category"
+              DTS:DTSID="{68794157-499F-4FC2-97EB-6C473C90B9FA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="129"
+              DTS:ObjectName="city"
+              DTS:DTSID="{CD3C0445-9B49-47F3-AB29-CE2E39258DD5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="129"
+              DTS:ObjectName="state"
+              DTS:DTSID="{4983CA27-E1E5-4C65-8EA7-1D4E2603871D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="129"
+              DTS:ObjectName="country"
+              DTS:DTSID="{27A3DE7C-57DB-485E-91DD-AFFDC3C96F18}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="129"
+              DTS:ObjectName="age"
+              DTS:DTSID="{66CE252A-0C1E-4DC9-A8B9-FBD52BBACD6F}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
   <DTS:Variables />
   <DTS:Executables>
     <DTS:Executable
-      DTS:refId="Package\Data Flow Task"
+      DTS:refId="Package\Execute SQL Task"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{CF4E4183-8CC3-4579-B835-650AED79EC9C}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Execute SQL Task"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{FD3E8F96-069F-4159-88E0-E0FA1B99FF4F}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE [Staging Table];" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Staging Task"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
       DTS:DTSID="{7F4F220F-A8FB-4194-8040-410C298BC787}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Data Flow Task"
+      DTS:ObjectName="Staging Task"
       DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
       <DTS:ObjectData>
@@ -64,13 +193,471 @@
           version="1">
           <components>
             <component
-              refId="Package\Data Flow Task\Excel Source"
-              componentClassID="Microsoft.ExcelSource"
-              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
-              description="Excel Source"
-              name="Excel Source"
+              refId="Package\Staging Task\Flat File Source"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="Flat File Source"
               usesDispositions="true"
               version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Staging Task\Flat File Source.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Staging Task\Flat File Source.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[id]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Staging Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[id]"
+                      length="255"
+                      lineageId="Package\Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[id]"
+                      name="id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[user_id]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Staging Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[user_id]"
+                      length="255"
+                      lineageId="Package\Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[user_id]"
+                      name="user_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[isbn]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Staging Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[isbn]"
+                      length="255"
+                      lineageId="Package\Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[isbn]"
+                      name="isbn"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[rating]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Staging Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[rating]"
+                      length="255"
+                      lineageId="Package\Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[rating]"
+                      name="rating"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[book_title]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Staging Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[book_title]"
+                      length="255"
+                      lineageId="Package\Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[book_title]"
+                      name="book_title"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[book_author]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Staging Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[book_author]"
+                      length="255"
+                      lineageId="Package\Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[book_author]"
+                      name="book_author"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[year_of_publication]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Staging Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[year_of_publication]"
+                      length="255"
+                      lineageId="Package\Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[year_of_publication]"
+                      name="year_of_publication"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[publisher]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Staging Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[publisher]"
+                      length="255"
+                      lineageId="Package\Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[publisher]"
+                      name="publisher"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[Language]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Staging Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Language]"
+                      length="255"
+                      lineageId="Package\Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[Language]"
+                      name="Language"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[Category]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Staging Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Category]"
+                      length="255"
+                      lineageId="Package\Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[Category]"
+                      name="Category"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[city]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Staging Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[city]"
+                      length="255"
+                      lineageId="Package\Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[city]"
+                      name="city"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[state]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Staging Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[state]"
+                      length="255"
+                      lineageId="Package\Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[state]"
+                      name="state"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[country]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Staging Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[country]"
+                      length="255"
+                      lineageId="Package\Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[country]"
+                      name="country"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[age]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Staging Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[age]"
+                      length="255"
+                      lineageId="Package\Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[age]"
+                      name="age"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Staging Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="id" />
+                    <externalMetadataColumn
+                      refId="Package\Staging Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[user_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="user_id" />
+                    <externalMetadataColumn
+                      refId="Package\Staging Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[isbn]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="isbn" />
+                    <externalMetadataColumn
+                      refId="Package\Staging Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[rating]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="rating" />
+                    <externalMetadataColumn
+                      refId="Package\Staging Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[book_title]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="book_title" />
+                    <externalMetadataColumn
+                      refId="Package\Staging Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[book_author]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="book_author" />
+                    <externalMetadataColumn
+                      refId="Package\Staging Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[year_of_publication]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="year_of_publication" />
+                    <externalMetadataColumn
+                      refId="Package\Staging Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[publisher]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="publisher" />
+                    <externalMetadataColumn
+                      refId="Package\Staging Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Language]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="Language" />
+                    <externalMetadataColumn
+                      refId="Package\Staging Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Category]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="Category" />
+                    <externalMetadataColumn
+                      refId="Package\Staging Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[city]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="city" />
+                    <externalMetadataColumn
+                      refId="Package\Staging Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[state]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="state" />
+                    <externalMetadataColumn
+                      refId="Package\Staging Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[country]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="country" />
+                    <externalMetadataColumn
+                      refId="Package\Staging Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[age]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="age" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Staging Task\Flat File Source.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Staging Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Staging Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Staging Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Staging Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Staging Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Staging Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Staging Task\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              validateExternalMetadata="False"
+              version="4">
               <properties>
                 <property
                   dataType="System.Int32"
@@ -79,7 +666,331 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">Preprocessed_data$</property>
+                  name="OpenRowset">[Staging Table]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Staging Task\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-1NBNSDK\SQLEXPRESS.DataWarehouse]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-1NBNSDK\SQLEXPRESS.DataWarehouse]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Staging Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Staging Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="id"
+                      externalMetadataColumnId="Package\Staging Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[id]"
+                      lineageId="Package\Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[id]" />
+                    <inputColumn
+                      refId="Package\Staging Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[user_id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="user_id"
+                      externalMetadataColumnId="Package\Staging Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[user_id]"
+                      lineageId="Package\Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[user_id]" />
+                    <inputColumn
+                      refId="Package\Staging Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[isbn]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="isbn"
+                      externalMetadataColumnId="Package\Staging Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[isbn]"
+                      lineageId="Package\Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[isbn]" />
+                    <inputColumn
+                      refId="Package\Staging Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[rating]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="rating"
+                      externalMetadataColumnId="Package\Staging Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[rating]"
+                      lineageId="Package\Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[rating]" />
+                    <inputColumn
+                      refId="Package\Staging Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[book_title]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="book_title"
+                      externalMetadataColumnId="Package\Staging Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[book_title]"
+                      lineageId="Package\Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[book_title]" />
+                    <inputColumn
+                      refId="Package\Staging Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[book_author]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="book_author"
+                      externalMetadataColumnId="Package\Staging Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[book_author]"
+                      lineageId="Package\Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[book_author]" />
+                    <inputColumn
+                      refId="Package\Staging Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[year_of_publication]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="year_of_publication"
+                      externalMetadataColumnId="Package\Staging Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[year_of_publication]"
+                      lineageId="Package\Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[year_of_publication]" />
+                    <inputColumn
+                      refId="Package\Staging Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[publisher]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="publisher"
+                      externalMetadataColumnId="Package\Staging Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[publisher]"
+                      lineageId="Package\Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[publisher]" />
+                    <inputColumn
+                      refId="Package\Staging Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Language]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Language"
+                      externalMetadataColumnId="Package\Staging Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Language]"
+                      lineageId="Package\Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[Language]" />
+                    <inputColumn
+                      refId="Package\Staging Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Category]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Category"
+                      externalMetadataColumnId="Package\Staging Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Category]"
+                      lineageId="Package\Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[Category]" />
+                    <inputColumn
+                      refId="Package\Staging Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[city]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="city"
+                      externalMetadataColumnId="Package\Staging Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[city]"
+                      lineageId="Package\Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[city]" />
+                    <inputColumn
+                      refId="Package\Staging Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[state]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="state"
+                      externalMetadataColumnId="Package\Staging Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[state]"
+                      lineageId="Package\Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[state]" />
+                    <inputColumn
+                      refId="Package\Staging Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[country]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="country"
+                      externalMetadataColumnId="Package\Staging Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[country]"
+                      lineageId="Package\Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[country]" />
+                    <inputColumn
+                      refId="Package\Staging Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[age]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="age"
+                      externalMetadataColumnId="Package\Staging Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[age]"
+                      lineageId="Package\Staging Task\Flat File Source.Outputs[Flat File Source Output].Columns[age]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Staging Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="id" />
+                    <externalMetadataColumn
+                      refId="Package\Staging Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[user_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="user_id" />
+                    <externalMetadataColumn
+                      refId="Package\Staging Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[isbn]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="isbn" />
+                    <externalMetadataColumn
+                      refId="Package\Staging Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[rating]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="rating" />
+                    <externalMetadataColumn
+                      refId="Package\Staging Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[book_title]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="book_title" />
+                    <externalMetadataColumn
+                      refId="Package\Staging Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[book_author]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="book_author" />
+                    <externalMetadataColumn
+                      refId="Package\Staging Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[year_of_publication]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="year_of_publication" />
+                    <externalMetadataColumn
+                      refId="Package\Staging Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[publisher]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="publisher" />
+                    <externalMetadataColumn
+                      refId="Package\Staging Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Language]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="Language" />
+                    <externalMetadataColumn
+                      refId="Package\Staging Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Category]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="Category" />
+                    <externalMetadataColumn
+                      refId="Package\Staging Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[city]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="city" />
+                    <externalMetadataColumn
+                      refId="Package\Staging Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[state]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="state" />
+                    <externalMetadataColumn
+                      refId="Package\Staging Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[country]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="country" />
+                    <externalMetadataColumn
+                      refId="Package\Staging Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[age]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="age" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Staging Task\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Staging Task\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Staging Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Staging Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Staging Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Staging Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Staging Task.Paths[Flat File Source Output]"
+              endId="Package\Staging Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Flat File Source Output"
+              startId="Package\Staging Task\Flat File Source.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Transformation Task"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{21F0C4D1-473F-4266-9C10-708A65D77B97}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Transformation Task"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Transformation Task\OLE DB Source"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLE DB Source"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Staging Table]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -95,428 +1006,391 @@
                   name="SqlCommandVariable"></property>
                 <property
                   dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
                   description="Specifies the mode used to access the database."
                   name="AccessMode"
                   typeConverter="AccessMode">0</property>
                 <property
                   dataType="System.String"
-                  description="The mapping from parameters in the SQL command to variables."
+                  description="The mappings between the parameters in the SQL command and variables."
                   name="ParameterMapping"></property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow Task\Excel Source.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager]"
-                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager]"
+                  refId="Package\Transformation Task\OLE DB Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-1NBNSDK\SQLEXPRESS.DataWarehouse]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-1NBNSDK\SQLEXPRESS.DataWarehouse]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output]"
-                  name="Excel Source Output">
+                  refId="Package\Transformation Task\OLE DB Source.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[id]"
-                      dataType="r8"
+                      refId="Package\Transformation Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[id]"
+                      codePage="1252"
+                      dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[id]"
-                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[id]"
+                      externalMetadataColumnId="Package\Transformation Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[id]"
+                      length="255"
+                      lineageId="Package\Transformation Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[id]"
                       name="id"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[user_id]"
-                      dataType="r8"
+                      refId="Package\Transformation Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[user_id]"
+                      codePage="1252"
+                      dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[user_id]"
-                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[user_id]"
+                      externalMetadataColumnId="Package\Transformation Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[user_id]"
+                      length="255"
+                      lineageId="Package\Transformation Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[user_id]"
                       name="user_id"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[location]"
-                      dataType="wstr"
+                      refId="Package\Transformation Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[isbn]"
+                      codePage="1252"
+                      dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[location]"
+                      externalMetadataColumnId="Package\Transformation Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[isbn]"
                       length="255"
-                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[location]"
-                      name="location"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[age]"
-                      dataType="r8"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[age]"
-                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[age]"
-                      name="age"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[isbn]"
-                      dataType="r8"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[isbn]"
-                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[isbn]"
+                      lineageId="Package\Transformation Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[isbn]"
                       name="isbn"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[rating]"
-                      dataType="r8"
+                      refId="Package\Transformation Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[rating]"
+                      codePage="1252"
+                      dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[rating]"
-                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[rating]"
+                      externalMetadataColumnId="Package\Transformation Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[rating]"
+                      length="255"
+                      lineageId="Package\Transformation Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[rating]"
                       name="rating"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[book_title]"
-                      dataType="wstr"
+                      refId="Package\Transformation Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[book_title]"
+                      codePage="1252"
+                      dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[book_title]"
+                      externalMetadataColumnId="Package\Transformation Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[book_title]"
                       length="255"
-                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[book_title]"
+                      lineageId="Package\Transformation Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[book_title]"
                       name="book_title"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[book_author]"
-                      dataType="wstr"
+                      refId="Package\Transformation Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[book_author]"
+                      codePage="1252"
+                      dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[book_author]"
+                      externalMetadataColumnId="Package\Transformation Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[book_author]"
                       length="255"
-                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[book_author]"
+                      lineageId="Package\Transformation Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[book_author]"
                       name="book_author"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[year_of_publication]"
-                      dataType="r8"
+                      refId="Package\Transformation Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[year_of_publication]"
+                      codePage="1252"
+                      dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[year_of_publication]"
-                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[year_of_publication]"
+                      externalMetadataColumnId="Package\Transformation Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[year_of_publication]"
+                      length="255"
+                      lineageId="Package\Transformation Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[year_of_publication]"
                       name="year_of_publication"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[publisher]"
-                      dataType="wstr"
+                      refId="Package\Transformation Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[publisher]"
+                      codePage="1252"
+                      dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[publisher]"
+                      externalMetadataColumnId="Package\Transformation Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[publisher]"
                       length="255"
-                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[publisher]"
+                      lineageId="Package\Transformation Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[publisher]"
                       name="publisher"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[img_s]"
-                      dataType="wstr"
+                      refId="Package\Transformation Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Language]"
+                      codePage="1252"
+                      dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[img_s]"
+                      externalMetadataColumnId="Package\Transformation Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Language]"
                       length="255"
-                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[img_s]"
-                      name="img_s"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[img_m]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[img_m]"
-                      length="255"
-                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[img_m]"
-                      name="img_m"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[img_l]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[img_l]"
-                      length="255"
-                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[img_l]"
-                      name="img_l"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[Summary]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[Summary]"
-                      length="255"
-                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[Summary]"
-                      name="Summary"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[Language]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[Language]"
-                      length="255"
-                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[Language]"
+                      lineageId="Package\Transformation Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Language]"
                       name="Language"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[Category]"
-                      dataType="wstr"
+                      refId="Package\Transformation Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Category]"
+                      codePage="1252"
+                      dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[Category]"
+                      externalMetadataColumnId="Package\Transformation Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Category]"
                       length="255"
-                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[Category]"
+                      lineageId="Package\Transformation Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Category]"
                       name="Category"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[city]"
-                      dataType="wstr"
+                      refId="Package\Transformation Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[city]"
+                      codePage="1252"
+                      dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[city]"
+                      externalMetadataColumnId="Package\Transformation Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[city]"
                       length="255"
-                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[city]"
+                      lineageId="Package\Transformation Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[city]"
                       name="city"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[state]"
-                      dataType="wstr"
+                      refId="Package\Transformation Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[state]"
+                      codePage="1252"
+                      dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[state]"
+                      externalMetadataColumnId="Package\Transformation Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[state]"
                       length="255"
-                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[state]"
+                      lineageId="Package\Transformation Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[state]"
                       name="state"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[country]"
-                      dataType="wstr"
+                      refId="Package\Transformation Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[country]"
+                      codePage="1252"
+                      dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[country]"
+                      externalMetadataColumnId="Package\Transformation Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[country]"
                       length="255"
-                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[country]"
+                      lineageId="Package\Transformation Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[country]"
                       name="country"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Transformation Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[age]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Transformation Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[age]"
+                      length="255"
+                      lineageId="Package\Transformation Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[age]"
+                      name="age"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[id]"
-                      dataType="r8"
+                      refId="Package\Transformation Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
                       name="id" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[user_id]"
-                      dataType="r8"
+                      refId="Package\Transformation Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[user_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
                       name="user_id" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[location]"
-                      dataType="wstr"
+                      refId="Package\Transformation Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[isbn]"
+                      codePage="1252"
+                      dataType="str"
                       length="255"
-                      name="location" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[age]"
-                      dataType="r8"
-                      name="age" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[isbn]"
-                      dataType="r8"
                       name="isbn" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[rating]"
-                      dataType="r8"
+                      refId="Package\Transformation Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[rating]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
                       name="rating" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[book_title]"
-                      dataType="wstr"
+                      refId="Package\Transformation Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[book_title]"
+                      codePage="1252"
+                      dataType="str"
                       length="255"
                       name="book_title" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[book_author]"
-                      dataType="wstr"
+                      refId="Package\Transformation Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[book_author]"
+                      codePage="1252"
+                      dataType="str"
                       length="255"
                       name="book_author" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[year_of_publication]"
-                      dataType="r8"
+                      refId="Package\Transformation Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[year_of_publication]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
                       name="year_of_publication" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[publisher]"
-                      dataType="wstr"
+                      refId="Package\Transformation Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[publisher]"
+                      codePage="1252"
+                      dataType="str"
                       length="255"
                       name="publisher" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[img_s]"
-                      dataType="wstr"
-                      length="255"
-                      name="img_s" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[img_m]"
-                      dataType="wstr"
-                      length="255"
-                      name="img_m" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[img_l]"
-                      dataType="wstr"
-                      length="255"
-                      name="img_l" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[Summary]"
-                      dataType="wstr"
-                      length="255"
-                      name="Summary" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[Language]"
-                      dataType="wstr"
+                      refId="Package\Transformation Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Language]"
+                      codePage="1252"
+                      dataType="str"
                       length="255"
                       name="Language" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[Category]"
-                      dataType="wstr"
+                      refId="Package\Transformation Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Category]"
+                      codePage="1252"
+                      dataType="str"
                       length="255"
                       name="Category" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[city]"
-                      dataType="wstr"
+                      refId="Package\Transformation Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[city]"
+                      codePage="1252"
+                      dataType="str"
                       length="255"
                       name="city" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[state]"
-                      dataType="wstr"
+                      refId="Package\Transformation Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[state]"
+                      codePage="1252"
+                      dataType="str"
                       length="255"
                       name="state" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[country]"
-                      dataType="wstr"
+                      refId="Package\Transformation Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[country]"
+                      codePage="1252"
+                      dataType="str"
                       length="255"
                       name="country" />
+                    <externalMetadataColumn
+                      refId="Package\Transformation Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[age]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="age" />
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output]"
+                  refId="Package\Transformation Task\OLE DB Source.Outputs[OLE DB Source Error Output]"
                   isErrorOut="true"
-                  name="Excel Source Error Output">
+                  name="OLE DB Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[id]"
-                      dataType="r8"
-                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[id]"
+                      refId="Package\Transformation Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\Transformation Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[id]"
                       name="id" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[user_id]"
-                      dataType="r8"
-                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[user_id]"
+                      refId="Package\Transformation Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[user_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\Transformation Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[user_id]"
                       name="user_id" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[location]"
-                      dataType="wstr"
+                      refId="Package\Transformation Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[isbn]"
+                      codePage="1252"
+                      dataType="str"
                       length="255"
-                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[location]"
-                      name="location" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[age]"
-                      dataType="r8"
-                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[age]"
-                      name="age" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[isbn]"
-                      dataType="r8"
-                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[isbn]"
+                      lineageId="Package\Transformation Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[isbn]"
                       name="isbn" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[rating]"
-                      dataType="r8"
-                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[rating]"
+                      refId="Package\Transformation Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[rating]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\Transformation Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[rating]"
                       name="rating" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[book_title]"
-                      dataType="wstr"
+                      refId="Package\Transformation Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[book_title]"
+                      codePage="1252"
+                      dataType="str"
                       length="255"
-                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[book_title]"
+                      lineageId="Package\Transformation Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[book_title]"
                       name="book_title" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[book_author]"
-                      dataType="wstr"
+                      refId="Package\Transformation Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[book_author]"
+                      codePage="1252"
+                      dataType="str"
                       length="255"
-                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[book_author]"
+                      lineageId="Package\Transformation Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[book_author]"
                       name="book_author" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[year_of_publication]"
-                      dataType="r8"
-                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[year_of_publication]"
+                      refId="Package\Transformation Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[year_of_publication]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\Transformation Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[year_of_publication]"
                       name="year_of_publication" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[publisher]"
-                      dataType="wstr"
+                      refId="Package\Transformation Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[publisher]"
+                      codePage="1252"
+                      dataType="str"
                       length="255"
-                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[publisher]"
+                      lineageId="Package\Transformation Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[publisher]"
                       name="publisher" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[img_s]"
-                      dataType="wstr"
+                      refId="Package\Transformation Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Language]"
+                      codePage="1252"
+                      dataType="str"
                       length="255"
-                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[img_s]"
-                      name="img_s" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[img_m]"
-                      dataType="wstr"
-                      length="255"
-                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[img_m]"
-                      name="img_m" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[img_l]"
-                      dataType="wstr"
-                      length="255"
-                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[img_l]"
-                      name="img_l" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[Summary]"
-                      dataType="wstr"
-                      length="255"
-                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[Summary]"
-                      name="Summary" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[Language]"
-                      dataType="wstr"
-                      length="255"
-                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[Language]"
+                      lineageId="Package\Transformation Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Language]"
                       name="Language" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[Category]"
-                      dataType="wstr"
+                      refId="Package\Transformation Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Category]"
+                      codePage="1252"
+                      dataType="str"
                       length="255"
-                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[Category]"
+                      lineageId="Package\Transformation Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Category]"
                       name="Category" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[city]"
-                      dataType="wstr"
+                      refId="Package\Transformation Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[city]"
+                      codePage="1252"
+                      dataType="str"
                       length="255"
-                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[city]"
+                      lineageId="Package\Transformation Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[city]"
                       name="city" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[state]"
-                      dataType="wstr"
+                      refId="Package\Transformation Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[state]"
+                      codePage="1252"
+                      dataType="str"
                       length="255"
-                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[state]"
+                      lineageId="Package\Transformation Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[state]"
                       name="state" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[country]"
-                      dataType="wstr"
+                      refId="Package\Transformation Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[country]"
+                      codePage="1252"
+                      dataType="str"
                       length="255"
-                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[country]"
+                      lineageId="Package\Transformation Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[country]"
                       name="country" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      refId="Package\Transformation Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[age]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\Transformation Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[age]"
+                      name="age" />
+                    <outputColumn
+                      refId="Package\Transformation Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Transformation Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\Transformation Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Transformation Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -529,6 +1403,24 @@
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{1958AD53-FC45-4F04-94FA-DE4D40A30472}"
+      DTS:From="Package\Staging Task"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Transformation Task" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{00BC1C04-1B29-4F8C-94BE-4D42409350A6}"
+      DTS:From="Package\Execute SQL Task"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Staging Task" />
+  </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
 <!--If you manually edit this section and make a mistake, you can delete it. -->
@@ -540,28 +1432,161 @@
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="150.4,41.6"
-          Id="Package\Data Flow Task"
+          Size="139.2,41.6"
+          Id="Package\Staging Task"
           TopLeft="140.000002384186,81.8235305593088" />
+        <NodeLayout
+          Size="175.2,41.6"
+          Id="Package\Transformation Task"
+          TopLeft="179.285717338932,205.705885237889" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="209.600002384186,123.423530559309">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="57.2857149547459,82.2823546785798"
+              Start="0,0"
+              End="57.2857149547459,74.7823546785798">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,37.1411773392899" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,37.1411773392899"
+                    Point2="0,41.1411773392899"
+                    Point3="4,41.1411773392899" />
+                  <mssgle:LineSegment
+                    End="53.2857149547459,41.1411773392899" />
+                  <mssgle:CubicBezierSegment
+                    Point1="53.2857149547459,41.1411773392899"
+                    Point2="57.2857149547459,41.1411773392899"
+                    Point3="57.2857149547459,45.1411773392899" />
+                  <mssgle:LineSegment
+                    End="57.2857149547459,74.7823546785798" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="162.4,41.6"
+          Id="Package\Execute SQL Task"
+          TopLeft="29.285714784447,22.1764708992519" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="191.685714784447,42.9764708992519">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="17.914287599739,38.8470596600569"
+              Start="0,0"
+              End="17.914287599739,31.3470596600569">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="13.914287599739,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="13.914287599739,0"
+                    Point2="17.914287599739,0"
+                    Point3="17.914287599739,4" />
+                  <mssgle:LineSegment
+                    End="17.914287599739,31.3470596600569" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>
   <TaskHost
-    design-time-name="Package\Data Flow Task">
+    design-time-name="Package\Staging Task">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="138.4,41.6"
-          Id="Package\Data Flow Task\Excel Source"
-          TopLeft="160.000002724784,97.8823543139395" />
+          Size="150.4,41.6"
+          Id="Package\Staging Task\Flat File Source"
+          TopLeft="60.000001021794,28.2941180438732" />
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\Staging Task\OLE DB Destination"
+          TopLeft="266.428575965823,196.529414520957" />
+        <EdgeLayout
+          Id="Package\Staging Task.Paths[Flat File Source Output]"
+          TopLeft="135.200001021794,69.8941180438731">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="216.428574944029,126.635296477084"
+              Start="0,0"
+              End="216.428574944029,119.135296477084">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,59.3176482385418" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,59.3176482385418"
+                    Point2="0,63.3176482385418"
+                    Point3="4,63.3176482385418" />
+                  <mssgle:LineSegment
+                    End="212.428574944029,63.3176482385418" />
+                  <mssgle:CubicBezierSegment
+                    Point1="212.428574944029,63.3176482385418"
+                    Point2="216.428574944029,63.3176482385418"
+                    Point3="216.428574944029,67.3176482385418" />
+                  <mssgle:LineSegment
+                    End="216.428574944029,119.135296477084" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Excel Source">
+    design-time-name="Package\Staging Task\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Transformation Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="149.6,41.6"
+          Id="Package\Transformation Task\OLE DB Source"
+          TopLeft="222,64" />
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Transformation Task\OLE DB Source">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
