@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">DESKTOP-1NBNSDK</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAi5Z/ywX4KU2IfKNim91xTAAAAAACAAAAAAAQZgAAAAEAACAAAADn7FU/EXOY76mjedqwOuE4FmWxEBioeKxHgYIzeijKGwAAAAAOgAAAAAIAACAAAAAkrp4aTsXlGvFlXJWxj94LiyTW0KNW7bcerdVeG5yx1pAAAAB9Dt0M07zQYajFJQal1G1ui3nDqKlsmx6NR3i5nP+ss2TTtUO9bmyTAp0gOJjQtEMRiIV0uVhAxxhkNQJVHKEEmo791SQ6F2HYe1AybzZIJ8jQmSZ2sYsOkrnjZbxhEhSAt5/slXCJqmqH2582R1Ft0l7KB53W6T/VO+C/j1pHJNC/i40sySXKeM44dZ5MJ2hAAAAAVMCJCD4rhnlkgJa3RALCTVrbr/qmwDhzb69dnBHgNPrh9Git6r7b5cS/bC6Hj5aKgwIngeJU9psee7asMDGmWA==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA82oGGFBIC06CWKXAoEX7bAAAAAACAAAAAAAQZgAAAAEAACAAAABAEX6GISGgkHyCWBEqm792pBChbsxg649pWeg2e+XMBAAAAAAOgAAAAAIAACAAAADOfDrTR9jTNRvRhCd6CidhBINa+JFqEoMdm+u4/REg6JAAAAA1SzYtujcRPGGqkrXoNzGPSMhcmPpUKnD3UDhdaW3hLlJjDvC1myVMdXPC9mYYTpExBxR5Smfk7EcVquHWu9aE4PRnS76xotc067R4X4IIK9yZbPSLOAtKlMJR34iA6Q6N2Vs3xGPeyEggmc1tQDLRnYdE4BQDkAH0QDojjux7cfgENbsFZOVJkVKF0K2DSQ5AAAAAxwyQHdAs6sgmCa/1NCFEx60sy1PEL3lgz+nyrQNWzQhcM0PUvHMz+EQ5ghjLgp0UKjra4plgNFa36CmodSPaVw==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -42,10 +42,10 @@
                 <SSIS:Property SSIS:Name="Name">Package</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">35</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">43</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{EFB13D48-D502-41F0-9092-ACF0D471385D}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{143803F2-3188-4BE8-B980-A28951441F8F}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -78,7 +78,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">Data Source=DESKTOP-1NBNSDK\SQLEXPRESS;Initial Catalog=DataWarehouse;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">Data Source=HP-IOANA\SQLEXPRESS;Initial Catalog=DataWarehouse;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -152,7 +152,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">DESKTOP-1NBNSDK\SQLEXPRESS</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">HP-IOANA\SQLEXPRESS</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -241,7 +241,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">C:\Users\Vlad\Desktop\Anul3\ANUL3-SEM2\BI Project\archive\Books Data with Category Language and Summary\Data2.csv</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">C:\Users\ioana\Desktop\Data2.csv</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -332,6 +332,8 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">
+                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
