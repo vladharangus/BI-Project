@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="95"
-  DTS:VersionGUID="{AAD4BC87-9B33-4787-93D5-956D0F87A0BB}">
+  DTS:VersionBuild="102"
+  DTS:VersionGUID="{558B3758-73A5-4A83-93B8-1C5C3054C8E3}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -23,7 +23,7 @@
       DTS:ObjectName="DESKTOP-1NBNSDK\SQLEXPRESS.DataWarehouse">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Data Source=DESKTOP-1NBNSDK\SQLEXPRESS;Initial Catalog=DataWarehouse;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=HP-IOANA\SQLEXPRESS;Initial Catalog=DataWarehouse;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -40,7 +40,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x0022_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\Vlad\Desktop\Anul3\ANUL3-SEM2\BI Project\archive\Books Data with Category Language and Summary\Data2.csv">
+          DTS:ConnectionString="C:\Users\ioana\Desktop\Data2.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -49,7 +49,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="id"
-              DTS:DTSID="{6EB174DF-6F2D-4870-A5B8-1CDAA3E71D55}"
+              DTS:DTSID="{D8386013-CDA3-4C0C-9919-D506D670A630}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -58,7 +58,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="user_id"
-              DTS:DTSID="{2F731DAC-4E2F-4796-9E2C-31EDDC02ADF1}"
+              DTS:DTSID="{9E07F8D3-991F-41D0-B69A-460E3DE2197D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -67,7 +67,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="isbn"
-              DTS:DTSID="{061377A4-2B97-4AA3-9034-CC25E63322C4}"
+              DTS:DTSID="{885AB3C1-E7CA-447F-94BA-A8222E252E60}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -76,7 +76,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="rating"
-              DTS:DTSID="{E6117AB4-E4A2-41CE-B5CF-ADE3402C8B21}"
+              DTS:DTSID="{53E6933D-EFA5-4A60-B719-E357EF0172D7}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -85,7 +85,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="book_title"
-              DTS:DTSID="{B4AF05FD-2AB4-45AA-9574-E366D0A2B152}"
+              DTS:DTSID="{4FA6F9F1-579D-48BC-81E5-E2F179B93F44}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -94,7 +94,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="book_author"
-              DTS:DTSID="{68AD8236-6A1E-4144-B80E-4AB7554F6172}"
+              DTS:DTSID="{DD227836-A039-476C-8DEA-65C614DA9B0E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -103,7 +103,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="year_of_publication"
-              DTS:DTSID="{678A1821-C65D-4B3F-B742-2EE06F42450A}"
+              DTS:DTSID="{29BCB5BB-DFDA-4F90-8085-564598085500}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -112,7 +112,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="publisher"
-              DTS:DTSID="{4D4770B7-A78E-40E7-9C32-4D2BAB8A6DF7}"
+              DTS:DTSID="{22B7C591-2BCA-4E34-A283-E6C9167FF2FE}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -121,7 +121,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Language"
-              DTS:DTSID="{AED11645-5DBD-4090-A70D-AAAFE7952994}"
+              DTS:DTSID="{33A7FD3A-3CE3-4796-B5EC-151676B545DB}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -130,7 +130,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Category"
-              DTS:DTSID="{839F39DB-642A-4B5F-B672-E24B9292C40B}"
+              DTS:DTSID="{643DCFAB-A88A-453B-81CA-F10A01D1E798}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -139,7 +139,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="city"
-              DTS:DTSID="{8080216B-1478-41F9-8927-A818FA40A028}"
+              DTS:DTSID="{0929A602-3966-4CD7-837B-173D9BF713E6}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -148,7 +148,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="state"
-              DTS:DTSID="{0BC239AF-FA80-43C0-A25A-A6C11051770E}"
+              DTS:DTSID="{E9170DB4-362F-4945-9871-B507B34B9AC6}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -157,7 +157,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="country"
-              DTS:DTSID="{B57E9A0B-B969-4DEE-A483-9C28FE9C0907}"
+              DTS:DTSID="{0992B3C4-7C49-4E9C-A88D-7E3C41EEE743}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -166,7 +166,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="age"
-              DTS:DTSID="{236F0B08-2C19-48F0-8455-0B0FC24DEEE7}"
+              DTS:DTSID="{C19A58C3-148B-4ED9-9282-A597A27870FF}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -1864,79 +1864,11 @@
           version="1">
           <components>
             <component
-              refId="Package\Dimensions\Balanced Data Distributor"
-              componentClassID="Microsoft.BDD"
-              contactInfo="Balanced Data Distributor;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
-              description="Evaluates and directs rows in a dataset to multiple destinations."
-              name="Balanced Data Distributor">
-              <inputs>
-                <input
-                  refId="Package\Dimensions\Balanced Data Distributor.Inputs[Balanced Data Distributor Input]"
-                  description="Input to the Balanced Data      Distributor Transformation"
-                  name="Balanced Data Distributor Input">
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Dimensions\Balanced Data Distributor.Outputs[Balanced Data Distributor Output 1]"
-                  deleteOutputOnPathDetached="true"
-                  exclusionGroup="1"
-                  name="Balanced Data Distributor Output 1"
-                  synchronousInputId="Package\Dimensions\Balanced Data Distributor.Inputs[Balanced Data Distributor Input]">
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Dimensions\Balanced Data Distributor.Outputs[Balanced Data Distributor Output 4]"
-                  dangling="true"
-                  deleteOutputOnPathDetached="true"
-                  exclusionGroup="1"
-                  name="Balanced Data Distributor Output 4"
-                  synchronousInputId="Package\Dimensions\Balanced Data Distributor.Inputs[Balanced Data Distributor Input]">
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Dimensions\Balanced Data Distributor 1"
-              componentClassID="Microsoft.BDD"
-              contactInfo="Balanced Data Distributor;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
-              description="Evaluates and directs rows in a dataset to multiple destinations."
-              name="Balanced Data Distributor 1">
-              <inputs>
-                <input
-                  refId="Package\Dimensions\Balanced Data Distributor 1.Inputs[Balanced Data Distributor Input]"
-                  description="Input to the Balanced Data      Distributor Transformation"
-                  name="Balanced Data Distributor Input">
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Dimensions\Balanced Data Distributor 1.Outputs[Balanced Data Distributor Output 1]"
-                  deleteOutputOnPathDetached="true"
-                  exclusionGroup="1"
-                  name="Balanced Data Distributor Output 1"
-                  synchronousInputId="Package\Dimensions\Balanced Data Distributor 1.Inputs[Balanced Data Distributor Input]">
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Dimensions\Balanced Data Distributor 1.Outputs[Balanced Data Distributor Output 2]"
-                  dangling="true"
-                  deleteOutputOnPathDetached="true"
-                  exclusionGroup="1"
-                  name="Balanced Data Distributor Output 2"
-                  synchronousInputId="Package\Dimensions\Balanced Data Distributor 1.Inputs[Balanced Data Distributor Input]">
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Dimensions\books"
+              refId="Package\Dimensions\Books"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
               description="OLE DB Destination"
-              name="books"
+              name="Books"
               usesDispositions="true"
               version="4">
               <properties>
@@ -1947,7 +1879,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[Books]</property>
+                  name="OpenRowset">[Books]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -1989,7 +1921,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Dimensions\books.Connections[OleDbConnection]"
+                  refId="Package\Dimensions\Books.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[DESKTOP-1NBNSDK\SQLEXPRESS.DataWarehouse]"
                   connectionManagerRefId="Package.ConnectionManagers[DESKTOP-1NBNSDK\SQLEXPRESS.DataWarehouse]"
                   description="The OLE DB runtime connection used to access the database."
@@ -1997,113 +1929,113 @@
               </connections>
               <inputs>
                 <input
-                  refId="Package\Dimensions\books.Inputs[OLE DB Destination Input]"
+                  refId="Package\Dimensions\Books.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Dimensions\books.Inputs[OLE DB Destination Input].Columns[isbn]"
+                      refId="Package\Dimensions\Books.Inputs[OLE DB Destination Input].Columns[isbn]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="255"
                       cachedName="isbn"
-                      externalMetadataColumnId="Package\Dimensions\books.Inputs[OLE DB Destination Input].ExternalColumns[isbn]"
-                      lineageId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[isbn]" />
+                      externalMetadataColumnId="Package\Dimensions\Books.Inputs[OLE DB Destination Input].ExternalColumns[isbn]"
+                      lineageId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output].Columns[isbn]" />
                     <inputColumn
-                      refId="Package\Dimensions\books.Inputs[OLE DB Destination Input].Columns[book_title]"
+                      refId="Package\Dimensions\Books.Inputs[OLE DB Destination Input].Columns[book_title]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="255"
                       cachedName="book_title"
-                      externalMetadataColumnId="Package\Dimensions\books.Inputs[OLE DB Destination Input].ExternalColumns[book_title]"
-                      lineageId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[book_title]" />
+                      externalMetadataColumnId="Package\Dimensions\Books.Inputs[OLE DB Destination Input].ExternalColumns[book_title]"
+                      lineageId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output].Columns[book_title]" />
                     <inputColumn
-                      refId="Package\Dimensions\books.Inputs[OLE DB Destination Input].Columns[book_author]"
+                      refId="Package\Dimensions\Books.Inputs[OLE DB Destination Input].Columns[book_author]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="255"
                       cachedName="book_author"
-                      externalMetadataColumnId="Package\Dimensions\books.Inputs[OLE DB Destination Input].ExternalColumns[book_author]"
-                      lineageId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[book_author]" />
+                      externalMetadataColumnId="Package\Dimensions\Books.Inputs[OLE DB Destination Input].ExternalColumns[book_author]"
+                      lineageId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output].Columns[book_author]" />
                     <inputColumn
-                      refId="Package\Dimensions\books.Inputs[OLE DB Destination Input].Columns[year_of_publication]"
+                      refId="Package\Dimensions\Books.Inputs[OLE DB Destination Input].Columns[year_of_publication]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="255"
                       cachedName="year_of_publication"
-                      externalMetadataColumnId="Package\Dimensions\books.Inputs[OLE DB Destination Input].ExternalColumns[year_of_publication]"
-                      lineageId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[year_of_publication]" />
+                      externalMetadataColumnId="Package\Dimensions\Books.Inputs[OLE DB Destination Input].ExternalColumns[year_of_publication]"
+                      lineageId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output].Columns[year_of_publication]" />
                     <inputColumn
-                      refId="Package\Dimensions\books.Inputs[OLE DB Destination Input].Columns[publisher]"
+                      refId="Package\Dimensions\Books.Inputs[OLE DB Destination Input].Columns[publisher]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="255"
                       cachedName="publisher"
-                      externalMetadataColumnId="Package\Dimensions\books.Inputs[OLE DB Destination Input].ExternalColumns[publisher]"
-                      lineageId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[publisher]" />
+                      externalMetadataColumnId="Package\Dimensions\Books.Inputs[OLE DB Destination Input].ExternalColumns[publisher]"
+                      lineageId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output].Columns[publisher]" />
                     <inputColumn
-                      refId="Package\Dimensions\books.Inputs[OLE DB Destination Input].Columns[Language]"
+                      refId="Package\Dimensions\Books.Inputs[OLE DB Destination Input].Columns[Language]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="255"
                       cachedName="Language"
-                      externalMetadataColumnId="Package\Dimensions\books.Inputs[OLE DB Destination Input].ExternalColumns[Language]"
-                      lineageId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[Language]" />
+                      externalMetadataColumnId="Package\Dimensions\Books.Inputs[OLE DB Destination Input].ExternalColumns[Language]"
+                      lineageId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output].Columns[Language]" />
                     <inputColumn
-                      refId="Package\Dimensions\books.Inputs[OLE DB Destination Input].Columns[Category]"
+                      refId="Package\Dimensions\Books.Inputs[OLE DB Destination Input].Columns[Category]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="255"
                       cachedName="Category"
-                      externalMetadataColumnId="Package\Dimensions\books.Inputs[OLE DB Destination Input].ExternalColumns[Category]"
-                      lineageId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[Category]" />
+                      externalMetadataColumnId="Package\Dimensions\Books.Inputs[OLE DB Destination Input].ExternalColumns[Category]"
+                      lineageId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output].Columns[Category]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Dimensions\books.Inputs[OLE DB Destination Input].ExternalColumns[id]"
+                      refId="Package\Dimensions\Books.Inputs[OLE DB Destination Input].ExternalColumns[id]"
                       dataType="i4"
                       name="id" />
                     <externalMetadataColumn
-                      refId="Package\Dimensions\books.Inputs[OLE DB Destination Input].ExternalColumns[isbn]"
+                      refId="Package\Dimensions\Books.Inputs[OLE DB Destination Input].ExternalColumns[isbn]"
                       codePage="1252"
                       dataType="str"
                       length="255"
                       name="isbn" />
                     <externalMetadataColumn
-                      refId="Package\Dimensions\books.Inputs[OLE DB Destination Input].ExternalColumns[book_title]"
+                      refId="Package\Dimensions\Books.Inputs[OLE DB Destination Input].ExternalColumns[book_title]"
                       codePage="1252"
                       dataType="str"
                       length="255"
                       name="book_title" />
                     <externalMetadataColumn
-                      refId="Package\Dimensions\books.Inputs[OLE DB Destination Input].ExternalColumns[book_author]"
+                      refId="Package\Dimensions\Books.Inputs[OLE DB Destination Input].ExternalColumns[book_author]"
                       codePage="1252"
                       dataType="str"
                       length="255"
                       name="book_author" />
                     <externalMetadataColumn
-                      refId="Package\Dimensions\books.Inputs[OLE DB Destination Input].ExternalColumns[year_of_publication]"
+                      refId="Package\Dimensions\Books.Inputs[OLE DB Destination Input].ExternalColumns[year_of_publication]"
                       codePage="1252"
                       dataType="str"
                       length="255"
                       name="year_of_publication" />
                     <externalMetadataColumn
-                      refId="Package\Dimensions\books.Inputs[OLE DB Destination Input].ExternalColumns[publisher]"
+                      refId="Package\Dimensions\Books.Inputs[OLE DB Destination Input].ExternalColumns[publisher]"
                       codePage="1252"
                       dataType="str"
                       length="255"
                       name="publisher" />
                     <externalMetadataColumn
-                      refId="Package\Dimensions\books.Inputs[OLE DB Destination Input].ExternalColumns[Language]"
+                      refId="Package\Dimensions\Books.Inputs[OLE DB Destination Input].ExternalColumns[Language]"
                       codePage="1252"
                       dataType="str"
                       length="255"
                       name="Language" />
                     <externalMetadataColumn
-                      refId="Package\Dimensions\books.Inputs[OLE DB Destination Input].ExternalColumns[Category]"
+                      refId="Package\Dimensions\Books.Inputs[OLE DB Destination Input].ExternalColumns[Category]"
                       codePage="1252"
                       dataType="str"
                       length="255"
@@ -2113,22 +2045,22 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Dimensions\books.Outputs[OLE DB Destination Error Output]"
+                  refId="Package\Dimensions\Books.Outputs[OLE DB Destination Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Dimensions\books.Inputs[OLE DB Destination Input]">
+                  synchronousInputId="Package\Dimensions\Books.Inputs[OLE DB Destination Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Dimensions\books.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\Dimensions\Books.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Dimensions\books.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Dimensions\Books.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Dimensions\books.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\Dimensions\Books.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Dimensions\books.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Dimensions\Books.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -2137,11 +2069,49 @@
               </outputs>
             </component>
             <component
-              refId="Package\Dimensions\OLE DB Source"
+              refId="Package\Dimensions\Multicast"
+              componentClassID="Microsoft.Multicast"
+              contactInfo="Multicast;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Distributes every input row to every row in one or more outputs. For example, branch your data flow to make a copy of data so that some values can be masked before sharing with external partners."
+              name="Multicast">
+              <inputs>
+                <input
+                  refId="Package\Dimensions\Multicast.Inputs[Multicast Input 1]"
+                  name="Multicast Input 1">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Dimensions\Multicast.Outputs[Multicast Output 1]"
+                  deleteOutputOnPathDetached="true"
+                  name="Multicast Output 1"
+                  synchronousInputId="Package\Dimensions\Multicast.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Dimensions\Multicast.Outputs[Multicast Output 3]"
+                  dangling="true"
+                  deleteOutputOnPathDetached="true"
+                  name="Multicast Output 3"
+                  synchronousInputId="Package\Dimensions\Multicast.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Dimensions\Multicast.Outputs[Multicast Output 2]"
+                  deleteOutputOnPathDetached="true"
+                  name="Multicast Output 2"
+                  synchronousInputId="Package\Dimensions\Multicast.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Dimensions\Staging Table"
               componentClassID="Microsoft.OLEDBSource"
               contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
               description="OLE DB Source"
-              name="OLE DB Source"
+              name="Staging Table"
               usesDispositions="true"
               version="7">
               <properties>
@@ -2186,7 +2156,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Dimensions\OLE DB Source.Connections[OleDbConnection]"
+                  refId="Package\Dimensions\Staging Table.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[DESKTOP-1NBNSDK\SQLEXPRESS.DataWarehouse]"
                   connectionManagerRefId="Package.ConnectionManagers[DESKTOP-1NBNSDK\SQLEXPRESS.DataWarehouse]"
                   description="The OLE DB runtime connection used to access the database."
@@ -2194,328 +2164,328 @@
               </connections>
               <outputs>
                 <output
-                  refId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Output]"
+                  refId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output]"
                   name="OLE DB Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Output].Columns[id]"
+                      refId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output].Columns[id]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[id]"
+                      externalMetadataColumnId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output].ExternalColumns[id]"
                       length="255"
-                      lineageId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Output].Columns[id]"
+                      lineageId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output].Columns[id]"
                       name="id"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Output].Columns[user_id]"
+                      refId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output].Columns[user_id]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[user_id]"
+                      externalMetadataColumnId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output].ExternalColumns[user_id]"
                       length="255"
-                      lineageId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Output].Columns[user_id]"
+                      lineageId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output].Columns[user_id]"
                       name="user_id"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Output].Columns[isbn]"
+                      refId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output].Columns[isbn]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[isbn]"
+                      externalMetadataColumnId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output].ExternalColumns[isbn]"
                       length="255"
-                      lineageId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Output].Columns[isbn]"
+                      lineageId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output].Columns[isbn]"
                       name="isbn"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Output].Columns[rating]"
+                      refId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output].Columns[rating]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[rating]"
+                      externalMetadataColumnId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output].ExternalColumns[rating]"
                       length="255"
-                      lineageId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Output].Columns[rating]"
+                      lineageId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output].Columns[rating]"
                       name="rating"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Output].Columns[book_title]"
+                      refId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output].Columns[book_title]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[book_title]"
+                      externalMetadataColumnId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output].ExternalColumns[book_title]"
                       length="255"
-                      lineageId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Output].Columns[book_title]"
+                      lineageId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output].Columns[book_title]"
                       name="book_title"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Output].Columns[book_author]"
+                      refId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output].Columns[book_author]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[book_author]"
+                      externalMetadataColumnId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output].ExternalColumns[book_author]"
                       length="255"
-                      lineageId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Output].Columns[book_author]"
+                      lineageId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output].Columns[book_author]"
                       name="book_author"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Output].Columns[year_of_publication]"
+                      refId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output].Columns[year_of_publication]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[year_of_publication]"
+                      externalMetadataColumnId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output].ExternalColumns[year_of_publication]"
                       length="255"
-                      lineageId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Output].Columns[year_of_publication]"
+                      lineageId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output].Columns[year_of_publication]"
                       name="year_of_publication"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Output].Columns[publisher]"
+                      refId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output].Columns[publisher]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[publisher]"
+                      externalMetadataColumnId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output].ExternalColumns[publisher]"
                       length="255"
-                      lineageId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Output].Columns[publisher]"
+                      lineageId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output].Columns[publisher]"
                       name="publisher"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Output].Columns[Language]"
+                      refId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output].Columns[Language]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Language]"
+                      externalMetadataColumnId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output].ExternalColumns[Language]"
                       length="255"
-                      lineageId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Output].Columns[Language]"
+                      lineageId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output].Columns[Language]"
                       name="Language"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Output].Columns[Category]"
+                      refId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output].Columns[Category]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Category]"
+                      externalMetadataColumnId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output].ExternalColumns[Category]"
                       length="255"
-                      lineageId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Output].Columns[Category]"
+                      lineageId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output].Columns[Category]"
                       name="Category"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Output].Columns[city]"
+                      refId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output].Columns[city]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[city]"
+                      externalMetadataColumnId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output].ExternalColumns[city]"
                       length="255"
-                      lineageId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Output].Columns[city]"
+                      lineageId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output].Columns[city]"
                       name="city"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Output].Columns[state]"
+                      refId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output].Columns[state]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[state]"
+                      externalMetadataColumnId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output].ExternalColumns[state]"
                       length="255"
-                      lineageId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Output].Columns[state]"
+                      lineageId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output].Columns[state]"
                       name="state"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Output].Columns[country]"
+                      refId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output].Columns[country]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[country]"
+                      externalMetadataColumnId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output].ExternalColumns[country]"
                       length="255"
-                      lineageId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Output].Columns[country]"
+                      lineageId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output].Columns[country]"
                       name="country"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Output].Columns[age]"
+                      refId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output].Columns[age]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[age]"
+                      externalMetadataColumnId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output].ExternalColumns[age]"
                       length="255"
-                      lineageId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Output].Columns[age]"
+                      lineageId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output].Columns[age]"
                       name="age"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Output].Columns[price]"
+                      refId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output].Columns[price]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[price]"
-                      lineageId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Output].Columns[price]"
+                      externalMetadataColumnId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output].ExternalColumns[price]"
+                      lineageId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output].Columns[price]"
                       name="price"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Output].Columns[quantity]"
+                      refId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output].Columns[quantity]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[quantity]"
-                      lineageId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Output].Columns[quantity]"
+                      externalMetadataColumnId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output].ExternalColumns[quantity]"
+                      lineageId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output].Columns[quantity]"
                       name="quantity"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Output].Columns[ratingRelevance]"
+                      refId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output].Columns[ratingRelevance]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ratingRelevance]"
-                      lineageId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Output].Columns[ratingRelevance]"
+                      externalMetadataColumnId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output].ExternalColumns[ratingRelevance]"
+                      lineageId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output].Columns[ratingRelevance]"
                       name="ratingRelevance"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Output].Columns[timeID]"
+                      refId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output].Columns[timeID]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[timeID]"
-                      lineageId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Output].Columns[timeID]"
+                      externalMetadataColumnId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output].ExternalColumns[timeID]"
+                      lineageId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output].Columns[timeID]"
                       name="timeID"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Output].Columns[timeIDSale]"
+                      refId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output].Columns[timeIDSale]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[timeIDSale]"
-                      lineageId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Output].Columns[timeIDSale]"
+                      externalMetadataColumnId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output].ExternalColumns[timeIDSale]"
+                      lineageId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output].Columns[timeIDSale]"
                       name="timeIDSale"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Output].Columns[fullName]"
+                      refId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output].Columns[fullName]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[fullName]"
+                      externalMetadataColumnId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output].ExternalColumns[fullName]"
                       length="255"
-                      lineageId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Output].Columns[fullName]"
+                      lineageId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output].Columns[fullName]"
                       name="fullName"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[id]"
+                      refId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output].ExternalColumns[id]"
                       codePage="1252"
                       dataType="str"
                       length="255"
                       name="id" />
                     <externalMetadataColumn
-                      refId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[user_id]"
+                      refId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output].ExternalColumns[user_id]"
                       codePage="1252"
                       dataType="str"
                       length="255"
                       name="user_id" />
                     <externalMetadataColumn
-                      refId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[isbn]"
+                      refId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output].ExternalColumns[isbn]"
                       codePage="1252"
                       dataType="str"
                       length="255"
                       name="isbn" />
                     <externalMetadataColumn
-                      refId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[rating]"
+                      refId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output].ExternalColumns[rating]"
                       codePage="1252"
                       dataType="str"
                       length="255"
                       name="rating" />
                     <externalMetadataColumn
-                      refId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[book_title]"
+                      refId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output].ExternalColumns[book_title]"
                       codePage="1252"
                       dataType="str"
                       length="255"
                       name="book_title" />
                     <externalMetadataColumn
-                      refId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[book_author]"
+                      refId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output].ExternalColumns[book_author]"
                       codePage="1252"
                       dataType="str"
                       length="255"
                       name="book_author" />
                     <externalMetadataColumn
-                      refId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[year_of_publication]"
+                      refId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output].ExternalColumns[year_of_publication]"
                       codePage="1252"
                       dataType="str"
                       length="255"
                       name="year_of_publication" />
                     <externalMetadataColumn
-                      refId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[publisher]"
+                      refId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output].ExternalColumns[publisher]"
                       codePage="1252"
                       dataType="str"
                       length="255"
                       name="publisher" />
                     <externalMetadataColumn
-                      refId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Language]"
+                      refId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output].ExternalColumns[Language]"
                       codePage="1252"
                       dataType="str"
                       length="255"
                       name="Language" />
                     <externalMetadataColumn
-                      refId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Category]"
+                      refId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output].ExternalColumns[Category]"
                       codePage="1252"
                       dataType="str"
                       length="255"
                       name="Category" />
                     <externalMetadataColumn
-                      refId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[city]"
+                      refId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output].ExternalColumns[city]"
                       codePage="1252"
                       dataType="str"
                       length="255"
                       name="city" />
                     <externalMetadataColumn
-                      refId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[state]"
+                      refId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output].ExternalColumns[state]"
                       codePage="1252"
                       dataType="str"
                       length="255"
                       name="state" />
                     <externalMetadataColumn
-                      refId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[country]"
+                      refId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output].ExternalColumns[country]"
                       codePage="1252"
                       dataType="str"
                       length="255"
                       name="country" />
                     <externalMetadataColumn
-                      refId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[age]"
+                      refId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output].ExternalColumns[age]"
                       codePage="1252"
                       dataType="str"
                       length="255"
                       name="age" />
                     <externalMetadataColumn
-                      refId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[price]"
-                      dataType="i2"
+                      refId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output].ExternalColumns[price]"
+                      dataType="i4"
                       name="price" />
                     <externalMetadataColumn
-                      refId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[quantity]"
-                      dataType="i2"
+                      refId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output].ExternalColumns[quantity]"
+                      dataType="i4"
                       name="quantity" />
                     <externalMetadataColumn
-                      refId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ratingRelevance]"
+                      refId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output].ExternalColumns[ratingRelevance]"
                       dataType="i4"
                       name="ratingRelevance" />
                     <externalMetadataColumn
-                      refId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[timeID]"
+                      refId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output].ExternalColumns[timeID]"
                       dataType="i4"
                       name="timeID" />
                     <externalMetadataColumn
-                      refId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[timeIDSale]"
+                      refId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output].ExternalColumns[timeIDSale]"
                       dataType="i4"
                       name="timeIDSale" />
                     <externalMetadataColumn
-                      refId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[fullName]"
+                      refId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output].ExternalColumns[fullName]"
                       codePage="1252"
                       dataType="str"
                       length="255"
@@ -2523,688 +2493,150 @@
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Error Output]"
+                  refId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Error Output]"
                   isErrorOut="true"
                   name="OLE DB Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[id]"
+                      refId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Error Output].Columns[id]"
                       codePage="1252"
                       dataType="str"
                       length="255"
-                      lineageId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[id]"
+                      lineageId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Error Output].Columns[id]"
                       name="id" />
                     <outputColumn
-                      refId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[user_id]"
+                      refId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Error Output].Columns[user_id]"
                       codePage="1252"
                       dataType="str"
                       length="255"
-                      lineageId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[user_id]"
+                      lineageId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Error Output].Columns[user_id]"
                       name="user_id" />
                     <outputColumn
-                      refId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[isbn]"
+                      refId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Error Output].Columns[isbn]"
                       codePage="1252"
                       dataType="str"
                       length="255"
-                      lineageId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[isbn]"
+                      lineageId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Error Output].Columns[isbn]"
                       name="isbn" />
                     <outputColumn
-                      refId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[rating]"
+                      refId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Error Output].Columns[rating]"
                       codePage="1252"
                       dataType="str"
                       length="255"
-                      lineageId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[rating]"
+                      lineageId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Error Output].Columns[rating]"
                       name="rating" />
                     <outputColumn
-                      refId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[book_title]"
+                      refId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Error Output].Columns[book_title]"
                       codePage="1252"
                       dataType="str"
                       length="255"
-                      lineageId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[book_title]"
+                      lineageId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Error Output].Columns[book_title]"
                       name="book_title" />
                     <outputColumn
-                      refId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[book_author]"
+                      refId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Error Output].Columns[book_author]"
                       codePage="1252"
                       dataType="str"
                       length="255"
-                      lineageId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[book_author]"
+                      lineageId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Error Output].Columns[book_author]"
                       name="book_author" />
                     <outputColumn
-                      refId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[year_of_publication]"
+                      refId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Error Output].Columns[year_of_publication]"
                       codePage="1252"
                       dataType="str"
                       length="255"
-                      lineageId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[year_of_publication]"
+                      lineageId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Error Output].Columns[year_of_publication]"
                       name="year_of_publication" />
                     <outputColumn
-                      refId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[publisher]"
+                      refId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Error Output].Columns[publisher]"
                       codePage="1252"
                       dataType="str"
                       length="255"
-                      lineageId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[publisher]"
+                      lineageId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Error Output].Columns[publisher]"
                       name="publisher" />
                     <outputColumn
-                      refId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Language]"
+                      refId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Error Output].Columns[Language]"
                       codePage="1252"
                       dataType="str"
                       length="255"
-                      lineageId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Language]"
+                      lineageId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Error Output].Columns[Language]"
                       name="Language" />
                     <outputColumn
-                      refId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Category]"
+                      refId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Error Output].Columns[Category]"
                       codePage="1252"
                       dataType="str"
                       length="255"
-                      lineageId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Category]"
+                      lineageId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Error Output].Columns[Category]"
                       name="Category" />
                     <outputColumn
-                      refId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[city]"
+                      refId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Error Output].Columns[city]"
                       codePage="1252"
                       dataType="str"
                       length="255"
-                      lineageId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[city]"
+                      lineageId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Error Output].Columns[city]"
                       name="city" />
                     <outputColumn
-                      refId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[state]"
+                      refId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Error Output].Columns[state]"
                       codePage="1252"
                       dataType="str"
                       length="255"
-                      lineageId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[state]"
+                      lineageId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Error Output].Columns[state]"
                       name="state" />
                     <outputColumn
-                      refId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[country]"
+                      refId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Error Output].Columns[country]"
                       codePage="1252"
                       dataType="str"
                       length="255"
-                      lineageId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[country]"
+                      lineageId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Error Output].Columns[country]"
                       name="country" />
                     <outputColumn
-                      refId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[age]"
+                      refId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Error Output].Columns[age]"
                       codePage="1252"
                       dataType="str"
                       length="255"
-                      lineageId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[age]"
+                      lineageId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Error Output].Columns[age]"
                       name="age" />
                     <outputColumn
-                      refId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[price]"
-                      dataType="i2"
-                      lineageId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[price]"
+                      refId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Error Output].Columns[price]"
+                      dataType="i4"
+                      lineageId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Error Output].Columns[price]"
                       name="price" />
                     <outputColumn
-                      refId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[quantity]"
-                      dataType="i2"
-                      lineageId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[quantity]"
+                      refId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Error Output].Columns[quantity]"
+                      dataType="i4"
+                      lineageId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Error Output].Columns[quantity]"
                       name="quantity" />
                     <outputColumn
-                      refId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ratingRelevance]"
+                      refId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Error Output].Columns[ratingRelevance]"
                       dataType="i4"
-                      lineageId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ratingRelevance]"
+                      lineageId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Error Output].Columns[ratingRelevance]"
                       name="ratingRelevance" />
                     <outputColumn
-                      refId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[timeID]"
+                      refId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Error Output].Columns[timeID]"
                       dataType="i4"
-                      lineageId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[timeID]"
+                      lineageId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Error Output].Columns[timeID]"
                       name="timeID" />
                     <outputColumn
-                      refId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[timeIDSale]"
+                      refId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Error Output].Columns[timeIDSale]"
                       dataType="i4"
-                      lineageId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[timeIDSale]"
+                      lineageId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Error Output].Columns[timeIDSale]"
                       name="timeIDSale" />
                     <outputColumn
-                      refId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[fullName]"
+                      refId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Error Output].Columns[fullName]"
                       codePage="1252"
                       dataType="str"
                       length="255"
-                      lineageId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[fullName]"
+                      lineageId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Error Output].Columns[fullName]"
                       name="fullName" />
                     <outputColumn
-                      refId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      refId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Dimensions\OLE DB Source 1"
-              componentClassID="Microsoft.OLEDBSource"
-              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
-              description="OLE DB Source"
-              name="OLE DB Source 1"
-              usesDispositions="true"
-              version="7">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[Staging Table]</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the variable that contains the name of the database object used to open a rowset."
-                  name="OpenRowsetVariable"></property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
-                <property
-                  dataType="System.String"
-                  description="The variable that contains the SQL command to be executed."
-                  name="SqlCommandVariable"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Forces the use of the DefaultCodePage property value when describing character data."
-                  name="AlwaysUseDefaultCodePage">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the mode used to access the database."
-                  name="AccessMode"
-                  typeConverter="AccessMode">0</property>
-                <property
-                  dataType="System.String"
-                  description="The mappings between the parameters in the SQL command and variables."
-                  name="ParameterMapping"></property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Dimensions\OLE DB Source 1.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-1NBNSDK\SQLEXPRESS.DataWarehouse]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-1NBNSDK\SQLEXPRESS.DataWarehouse]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <outputs>
-                <output
-                  refId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Output]"
-                  name="OLE DB Source Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[id]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[id]"
-                      length="255"
-                      lineageId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[id]"
-                      name="id"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[user_id]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[user_id]"
-                      length="255"
-                      lineageId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[user_id]"
-                      name="user_id"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[isbn]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[isbn]"
-                      length="255"
-                      lineageId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[isbn]"
-                      name="isbn"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[rating]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[rating]"
-                      length="255"
-                      lineageId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[rating]"
-                      name="rating"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[book_title]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[book_title]"
-                      length="255"
-                      lineageId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[book_title]"
-                      name="book_title"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[book_author]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[book_author]"
-                      length="255"
-                      lineageId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[book_author]"
-                      name="book_author"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[year_of_publication]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[year_of_publication]"
-                      length="255"
-                      lineageId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[year_of_publication]"
-                      name="year_of_publication"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[publisher]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[publisher]"
-                      length="255"
-                      lineageId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[publisher]"
-                      name="publisher"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[Language]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[Language]"
-                      length="255"
-                      lineageId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[Language]"
-                      name="Language"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[Category]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[Category]"
-                      length="255"
-                      lineageId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[Category]"
-                      name="Category"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[city]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[city]"
-                      length="255"
-                      lineageId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[city]"
-                      name="city"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[state]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[state]"
-                      length="255"
-                      lineageId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[state]"
-                      name="state"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[country]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[country]"
-                      length="255"
-                      lineageId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[country]"
-                      name="country"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[age]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[age]"
-                      length="255"
-                      lineageId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[age]"
-                      name="age"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[fullName]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[fullName]"
-                      length="255"
-                      lineageId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[fullName]"
-                      name="fullName"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[price]"
-                      dataType="i2"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[price]"
-                      lineageId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[price]"
-                      name="price"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[quantity]"
-                      dataType="i2"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[quantity]"
-                      lineageId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[quantity]"
-                      name="quantity"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[timeID]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[timeID]"
-                      lineageId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[timeID]"
-                      name="timeID"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[ratingRelevance]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[ratingRelevance]"
-                      lineageId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[ratingRelevance]"
-                      name="ratingRelevance"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[timeIDSale]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[timeIDSale]"
-                      lineageId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[timeIDSale]"
-                      name="timeIDSale"
-                      truncationRowDisposition="FailComponent" />
-                  </outputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[id]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      name="id" />
-                    <externalMetadataColumn
-                      refId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[user_id]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      name="user_id" />
-                    <externalMetadataColumn
-                      refId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[isbn]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      name="isbn" />
-                    <externalMetadataColumn
-                      refId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[rating]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      name="rating" />
-                    <externalMetadataColumn
-                      refId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[book_title]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      name="book_title" />
-                    <externalMetadataColumn
-                      refId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[book_author]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      name="book_author" />
-                    <externalMetadataColumn
-                      refId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[year_of_publication]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      name="year_of_publication" />
-                    <externalMetadataColumn
-                      refId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[publisher]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      name="publisher" />
-                    <externalMetadataColumn
-                      refId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[Language]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      name="Language" />
-                    <externalMetadataColumn
-                      refId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[Category]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      name="Category" />
-                    <externalMetadataColumn
-                      refId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[city]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      name="city" />
-                    <externalMetadataColumn
-                      refId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[state]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      name="state" />
-                    <externalMetadataColumn
-                      refId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[country]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      name="country" />
-                    <externalMetadataColumn
-                      refId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[age]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      name="age" />
-                    <externalMetadataColumn
-                      refId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[fullName]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      name="fullName" />
-                    <externalMetadataColumn
-                      refId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[price]"
-                      dataType="i2"
-                      name="price" />
-                    <externalMetadataColumn
-                      refId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[quantity]"
-                      dataType="i2"
-                      name="quantity" />
-                    <externalMetadataColumn
-                      refId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[timeID]"
-                      dataType="i4"
-                      name="timeID" />
-                    <externalMetadataColumn
-                      refId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[ratingRelevance]"
-                      dataType="i4"
-                      name="ratingRelevance" />
-                    <externalMetadataColumn
-                      refId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[timeIDSale]"
-                      dataType="i4"
-                      name="timeIDSale" />
-                  </externalMetadataColumns>
-                </output>
-                <output
-                  refId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Error Output]"
-                  isErrorOut="true"
-                  name="OLE DB Source Error Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[id]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      lineageId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[id]"
-                      name="id" />
-                    <outputColumn
-                      refId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[user_id]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      lineageId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[user_id]"
-                      name="user_id" />
-                    <outputColumn
-                      refId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[isbn]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      lineageId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[isbn]"
-                      name="isbn" />
-                    <outputColumn
-                      refId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[rating]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      lineageId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[rating]"
-                      name="rating" />
-                    <outputColumn
-                      refId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[book_title]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      lineageId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[book_title]"
-                      name="book_title" />
-                    <outputColumn
-                      refId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[book_author]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      lineageId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[book_author]"
-                      name="book_author" />
-                    <outputColumn
-                      refId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[year_of_publication]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      lineageId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[year_of_publication]"
-                      name="year_of_publication" />
-                    <outputColumn
-                      refId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[publisher]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      lineageId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[publisher]"
-                      name="publisher" />
-                    <outputColumn
-                      refId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[Language]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      lineageId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[Language]"
-                      name="Language" />
-                    <outputColumn
-                      refId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[Category]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      lineageId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[Category]"
-                      name="Category" />
-                    <outputColumn
-                      refId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[city]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      lineageId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[city]"
-                      name="city" />
-                    <outputColumn
-                      refId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[state]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      lineageId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[state]"
-                      name="state" />
-                    <outputColumn
-                      refId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[country]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      lineageId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[country]"
-                      name="country" />
-                    <outputColumn
-                      refId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[age]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      lineageId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[age]"
-                      name="age" />
-                    <outputColumn
-                      refId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[fullName]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      lineageId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[fullName]"
-                      name="fullName" />
-                    <outputColumn
-                      refId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[price]"
-                      dataType="i2"
-                      lineageId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[price]"
-                      name="price" />
-                    <outputColumn
-                      refId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[quantity]"
-                      dataType="i2"
-                      lineageId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[quantity]"
-                      name="quantity" />
-                    <outputColumn
-                      refId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[timeID]"
-                      dataType="i4"
-                      lineageId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[timeID]"
-                      name="timeID" />
-                    <outputColumn
-                      refId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[ratingRelevance]"
-                      dataType="i4"
-                      lineageId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[ratingRelevance]"
-                      name="ratingRelevance" />
-                    <outputColumn
-                      refId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[timeIDSale]"
-                      dataType="i4"
-                      lineageId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[timeIDSale]"
-                      name="timeIDSale" />
-                    <outputColumn
-                      refId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -3285,37 +2717,13 @@
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Dimensions\Users.Inputs[OLE DB Destination Input].Columns[user_id]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="user_id"
-                      externalMetadataColumnId="Package\Dimensions\Users.Inputs[OLE DB Destination Input].ExternalColumns[user_id]"
-                      lineageId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Output].Columns[user_id]" />
-                    <inputColumn
-                      refId="Package\Dimensions\Users.Inputs[OLE DB Destination Input].Columns[city]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="city"
-                      externalMetadataColumnId="Package\Dimensions\Users.Inputs[OLE DB Destination Input].ExternalColumns[city]"
-                      lineageId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Output].Columns[city]" />
-                    <inputColumn
-                      refId="Package\Dimensions\Users.Inputs[OLE DB Destination Input].Columns[state]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="state"
-                      externalMetadataColumnId="Package\Dimensions\Users.Inputs[OLE DB Destination Input].ExternalColumns[state]"
-                      lineageId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Output].Columns[state]" />
-                    <inputColumn
                       refId="Package\Dimensions\Users.Inputs[OLE DB Destination Input].Columns[country]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="255"
                       cachedName="country"
                       externalMetadataColumnId="Package\Dimensions\Users.Inputs[OLE DB Destination Input].ExternalColumns[country]"
-                      lineageId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Output].Columns[country]" />
+                      lineageId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output].Columns[country]" />
                     <inputColumn
                       refId="Package\Dimensions\Users.Inputs[OLE DB Destination Input].Columns[age]"
                       cachedCodepage="1252"
@@ -3323,7 +2731,7 @@
                       cachedLength="255"
                       cachedName="age"
                       externalMetadataColumnId="Package\Dimensions\Users.Inputs[OLE DB Destination Input].ExternalColumns[age]"
-                      lineageId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Output].Columns[age]" />
+                      lineageId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output].Columns[age]" />
                     <inputColumn
                       refId="Package\Dimensions\Users.Inputs[OLE DB Destination Input].Columns[fullName]"
                       cachedCodepage="1252"
@@ -3331,10 +2739,52 @@
                       cachedLength="255"
                       cachedName="fullName"
                       externalMetadataColumnId="Package\Dimensions\Users.Inputs[OLE DB Destination Input].ExternalColumns[fullName]"
-                      lineageId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Output].Columns[fullName]" />
+                      lineageId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output].Columns[fullName]" />
+                    <inputColumn
+                      refId="Package\Dimensions\Users.Inputs[OLE DB Destination Input].Columns[user_id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="user_id"
+                      externalMetadataColumnId="Package\Dimensions\Users.Inputs[OLE DB Destination Input].ExternalColumns[user_id]"
+                      lineageId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output].Columns[user_id]" />
+                    <inputColumn
+                      refId="Package\Dimensions\Users.Inputs[OLE DB Destination Input].Columns[city]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="city"
+                      externalMetadataColumnId="Package\Dimensions\Users.Inputs[OLE DB Destination Input].ExternalColumns[city]"
+                      lineageId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output].Columns[city]" />
+                    <inputColumn
+                      refId="Package\Dimensions\Users.Inputs[OLE DB Destination Input].Columns[state]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="state"
+                      externalMetadataColumnId="Package\Dimensions\Users.Inputs[OLE DB Destination Input].ExternalColumns[state]"
+                      lineageId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output].Columns[state]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Dimensions\Users.Inputs[OLE DB Destination Input].ExternalColumns[country]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="country" />
+                    <externalMetadataColumn
+                      refId="Package\Dimensions\Users.Inputs[OLE DB Destination Input].ExternalColumns[age]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="age" />
+                    <externalMetadataColumn
+                      refId="Package\Dimensions\Users.Inputs[OLE DB Destination Input].ExternalColumns[fullName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="fullName" />
                     <externalMetadataColumn
                       refId="Package\Dimensions\Users.Inputs[OLE DB Destination Input].ExternalColumns[id]"
                       dataType="i4"
@@ -3357,24 +2807,6 @@
                       dataType="str"
                       length="255"
                       name="state" />
-                    <externalMetadataColumn
-                      refId="Package\Dimensions\Users.Inputs[OLE DB Destination Input].ExternalColumns[country]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      name="country" />
-                    <externalMetadataColumn
-                      refId="Package\Dimensions\Users.Inputs[OLE DB Destination Input].ExternalColumns[age]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      name="age" />
-                    <externalMetadataColumn
-                      refId="Package\Dimensions\Users.Inputs[OLE DB Destination Input].ExternalColumns[fullName]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      name="fullName" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -3406,25 +2838,20 @@
           </components>
           <paths>
             <path
-              refId="Package\Dimensions.Paths[Balanced Data Distributor Output 1]"
+              refId="Package\Dimensions.Paths[Multicast Output 1]"
               endId="Package\Dimensions\Users.Inputs[OLE DB Destination Input]"
-              name="Balanced Data Distributor Output 1"
-              startId="Package\Dimensions\Balanced Data Distributor.Outputs[Balanced Data Distributor Output 1]" />
+              name="Multicast Output 1"
+              startId="Package\Dimensions\Multicast.Outputs[Multicast Output 1]" />
             <path
-              refId="Package\Dimensions.Paths[Balanced Data Distributor Output 11]"
-              endId="Package\Dimensions\books.Inputs[OLE DB Destination Input]"
-              name="Balanced Data Distributor Output 1"
-              startId="Package\Dimensions\Balanced Data Distributor 1.Outputs[Balanced Data Distributor Output 1]" />
+              refId="Package\Dimensions.Paths[Multicast Output 2]"
+              endId="Package\Dimensions\Books.Inputs[OLE DB Destination Input]"
+              name="Multicast Output 2"
+              startId="Package\Dimensions\Multicast.Outputs[Multicast Output 2]" />
             <path
               refId="Package\Dimensions.Paths[OLE DB Source Output]"
-              endId="Package\Dimensions\Balanced Data Distributor.Inputs[Balanced Data Distributor Input]"
+              endId="Package\Dimensions\Multicast.Inputs[Multicast Input 1]"
               name="OLE DB Source Output"
-              startId="Package\Dimensions\OLE DB Source.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\Dimensions.Paths[OLE DB Source Output1]"
-              endId="Package\Dimensions\Balanced Data Distributor 1.Inputs[Balanced Data Distributor Input]"
-              name="OLE DB Source Output"
-              startId="Package\Dimensions\OLE DB Source 1.Outputs[OLE DB Source Output]" />
+              startId="Package\Dimensions\Staging Table.Outputs[OLE DB Source Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -4344,6 +3771,14 @@
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
+          Size="150.4,41.6"
+          Id="Package\Data Flow Task"
+          TopLeft="310.000005279269,393.541181350332" />
+        <NodeLayout
+          Size="132,41.6"
+          Id="Package\Dimensions"
+          TopLeft="258.571432974874,286.000004011042" />
+        <NodeLayout
           Size="162.4,41.6"
           Id="Package\Execute SQL Task"
           TopLeft="29.285714784447,22.1764708992519" />
@@ -4351,6 +3786,10 @@
           Size="172,41.6"
           Id="Package\Execute SQL Task 1"
           TopLeft="115.714287684888,180.470590766326" />
+        <NodeLayout
+          Size="172,41.6"
+          Id="Package\Execute SQL Task 2"
+          TopLeft="550.000009366445,287.611767011696" />
         <NodeLayout
           Size="139.2,41.6"
           Id="Package\Staging Task"
@@ -4405,40 +3844,32 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="150.4,41.6"
-          Id="Package\Data Flow Task"
-          TopLeft="310.000005279269,393.541181350332" />
-        <NodeLayout
-          Size="172,41.6"
-          Id="Package\Execute SQL Task 2"
-          TopLeft="549.285723639995,286.847061118618" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
           TopLeft="201.714287684888,222.070590766326">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="433.571435955107,64.7764703522917"
+              EndConnector="434.285721681557,65.5411762453697"
               Start="0,0"
-              End="433.571435955107,57.2764703522917">
+              End="434.285721681557,58.0411762453697">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,28.3882351761458" />
+                    End="0,28.7705881226849" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,28.3882351761458"
-                    Point2="0,32.3882351761458"
-                    Point3="4,32.3882351761458" />
+                    Point1="0,28.7705881226849"
+                    Point2="0,32.7705881226849"
+                    Point3="4,32.7705881226849" />
                   <mssgle:LineSegment
-                    End="429.571435955107,32.3882351761458" />
+                    End="430.285721681557,32.7705881226849" />
                   <mssgle:CubicBezierSegment
-                    Point1="429.571435955107,32.3882351761458"
-                    Point2="433.571435955107,32.3882351761458"
-                    Point3="433.571435955107,36.3882351761458" />
+                    Point1="430.285721681557,32.7705881226849"
+                    Point2="434.285721681557,32.7705881226849"
+                    Point3="434.285721681557,36.7705881226849" />
                   <mssgle:LineSegment
-                    End="433.571435955107,57.2764703522917" />
+                    End="434.285721681557,58.0411762453697" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4447,24 +3878,20 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="132,41.6"
-          Id="Package\Dimensions"
-          TopLeft="258.571432974874,286.000004011042" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 3]"
-          TopLeft="549.285723639995,307.22353256483">
+          TopLeft="550.000009366445,307.605885511369">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-158.714290665121,0"
+              EndConnector="-159.428576391571,0"
               Start="0,0"
-              End="-151.214290665121,0">
+              End="-151.928576391571,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-151.214290665121,0" />
+                    End="-151.928576391571,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4479,26 +3906,26 @@
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="60.6285723043945,65.9411773392898"
+              EndConnector="60.6285723043949,65.94117733929"
               Start="0,0"
-              End="60.6285723043945,58.4411773392898">
+              End="60.6285723043949,58.44117733929">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,28.9705886696449" />
+                    End="0,28.970588669645" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,28.9705886696449"
-                    Point2="0,32.9705886696449"
-                    Point3="4,32.9705886696449" />
+                    Point1="0,28.970588669645"
+                    Point2="0,32.970588669645"
+                    Point3="4,32.970588669645" />
                   <mssgle:LineSegment
-                    End="56.6285723043945,32.9705886696449" />
+                    End="56.6285723043949,32.970588669645" />
                   <mssgle:CubicBezierSegment
-                    Point1="56.6285723043945,32.9705886696449"
-                    Point2="60.6285723043945,32.9705886696449"
-                    Point3="60.6285723043945,36.9705886696449" />
+                    Point1="56.6285723043949,32.970588669645"
+                    Point2="60.6285723043949,32.970588669645"
+                    Point3="60.6285723043949,36.970588669645" />
                   <mssgle:LineSegment
-                    End="60.6285723043945,58.4411773392898" />
+                    End="60.6285723043949,58.44117733929" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4511,10 +3938,382 @@
     </LayoutInfo>
   </Package>
   <TaskHost
+    design-time-name="Package\Data Flow Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="179.2,41.6"
+          Id="Package\Data Flow Task\OLE DB Destination 1"
+          TopLeft="812,327.4" />
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\Data Flow Task\OLE DB Destination"
+          TopLeft="377,390" />
+        <NodeLayout
+          Size="149.6,41.6"
+          Id="Package\Data Flow Task\OLE DB Source"
+          TopLeft="242,60" />
+        <NodeLayout
+          Size="106.4,41.6"
+          Id="Package\Data Flow Task\Sort 1"
+          TopLeft="763,164" />
+        <NodeLayout
+          Size="97.6,41.6"
+          Id="Package\Data Flow Task\Sort"
+          TopLeft="326,206" />
+        <NodeLayout
+          Size="152.8,41.6"
+          Id="Package\Data Flow Task\Derived Column"
+          TopLeft="479,302" />
+        <NodeLayout
+          Size="158.4,41.6"
+          Id="Package\Data Flow Task\OLE DB Source 1"
+          TopLeft="645,70" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Sort Output1]"
+          TopLeft="816.2,205.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="85.4,121.8"
+              Start="0,0"
+              End="85.4,114.3">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,56.9" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,56.9"
+                    Point2="0,60.9"
+                    Point3="4,60.9" />
+                  <mssgle:LineSegment
+                    End="81.4,60.9" />
+                  <mssgle:CubicBezierSegment
+                    Point1="81.4,60.9"
+                    Point2="85.4,60.9"
+                    Point3="85.4,64.9" />
+                  <mssgle:LineSegment
+                    End="85.4,114.3" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Sort Output]"
+          TopLeft="374.8,247.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="180.6,54.4"
+              Start="0,0"
+              End="180.6,46.9">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23.2" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,23.2"
+                    Point2="0,27.2"
+                    Point3="4,27.2" />
+                  <mssgle:LineSegment
+                    End="176.6,27.2" />
+                  <mssgle:CubicBezierSegment
+                    Point1="176.6,27.2"
+                    Point2="180.6,27.2"
+                    Point3="180.6,31.2" />
+                  <mssgle:LineSegment
+                    End="180.6,46.9" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[OLE DB Source Output1]"
+          TopLeft="724.2,111.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="92,52.4"
+              Start="0,0"
+              End="92,44.9">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.2" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,22.2"
+                    Point2="0,26.2"
+                    Point3="4,26.2" />
+                  <mssgle:LineSegment
+                    End="88,26.2" />
+                  <mssgle:CubicBezierSegment
+                    Point1="88,26.2"
+                    Point2="92,26.2"
+                    Point3="92,30.2" />
+                  <mssgle:LineSegment
+                    End="92,44.9" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
+          TopLeft="316.8,101.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="58,104.4"
+              Start="0,0"
+              End="58,96.9">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,48.2" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,48.2"
+                    Point2="0,52.2"
+                    Point3="4,52.2" />
+                  <mssgle:LineSegment
+                    End="54,52.2" />
+                  <mssgle:CubicBezierSegment
+                    Point1="54,52.2"
+                    Point2="58,52.2"
+                    Point3="58,56.2" />
+                  <mssgle:LineSegment
+                    End="58,96.9" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Derived Column Output]"
+          TopLeft="555.4,343.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-93.2000000000001,46.4"
+              Start="0,0"
+              End="-93.2000000000001,38.9">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.2" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,19.2"
+                    Point2="0,23.2"
+                    Point3="-4,23.2" />
+                  <mssgle:LineSegment
+                    End="-89.2000000000001,23.2" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-89.2000000000001,23.2"
+                    Point2="-93.2000000000001,23.2"
+                    Point3="-93.2000000000001,27.2" />
+                  <mssgle:LineSegment
+                    End="-93.2000000000001,38.9" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\OLE DB Destination 1">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\OLE DB Source 1">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Dimensions">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="120,41.6"
+          Id="Package\Dimensions\Multicast"
+          TopLeft="346.428577328215,302.058827765673" />
+        <NodeLayout
+          Size="104,41.6"
+          Id="Package\Dimensions\Users"
+          TopLeft="173.571431527332,399.176476186535" />
+        <EdgeLayout
+          Id="Package\Dimensions.Paths[Multicast Output 1]"
+          TopLeft="387.761910661549,343.658827765673">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-162.190479134216,55.5176484208617"
+              Start="0,0"
+              End="-162.190479134216,48.0176484208617">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.6453565927199" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18.6453565927199"
+                    Point2="0,22.6453565927199"
+                    Point3="-4,22.6453565927199" />
+                  <mssgle:LineSegment
+                    End="-158.190479134216,22.6453565927199" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-158.190479134216,22.6453565927199"
+                    Point2="-162.190479134216,22.6453565927199"
+                    Point3="-162.190479134216,26.6453565927199" />
+                  <mssgle:LineSegment
+                    End="-162.190479134216,48.0176484208617" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="106.4,41.6"
+          Id="Package\Dimensions\Books"
+          TopLeft="492.142865524,416.764711727321" />
+        <EdgeLayout
+          Id="Package\Dimensions.Paths[Multicast Output 2]"
+          TopLeft="425.095243994882,343.658827765673">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="120.247621529118,73.1058839616476"
+              Start="0,0"
+              End="120.247621529118,65.6058839616476">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.8195053001457" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,25.8195053001457"
+                    Point2="0,29.8195053001457"
+                    Point3="4,29.8195053001457" />
+                  <mssgle:LineSegment
+                    End="116.247621529118,29.8195053001457" />
+                  <mssgle:CubicBezierSegment
+                    Point1="116.247621529118,29.8195053001457"
+                    Point2="120.247621529118,29.8195053001457"
+                    Point3="120.247621529118,33.8195053001457" />
+                  <mssgle:LineSegment
+                    End="120.247621529118,65.6058839616476" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="142.4,41.6"
+          Id="Package\Dimensions\Staging Table"
+          TopLeft="330.000005619867,179.705884873248" />
+        <EdgeLayout
+          Id="Package\Dimensions.Paths[OLE DB Source Output]"
+          TopLeft="403.814291474041,221.305884873248">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,80.7529428924245"
+              Start="0,0"
+              End="0,73.2529428924245">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,73.2529428924245" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <TaskHost
     design-time-name="Package\Staging Task">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="170.4,41.6"
           Id="Package\Staging Task\OLE DB Destination"
@@ -4554,7 +4353,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -4573,464 +4374,8 @@
       </Property>
     </Properties>
   </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\Data Flow Task">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="149.6,41.6"
-          Id="Package\Data Flow Task\OLE DB Source"
-          TopLeft="242,60" />
-        <NodeLayout
-          Size="97.6,41.6"
-          Id="Package\Data Flow Task\Sort"
-          TopLeft="326,206" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
-          TopLeft="316.8,101.6">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="58,104.4"
-              Start="0,0"
-              End="58,96.9">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,48.2" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,48.2"
-                    Point2="0,52.2"
-                    Point3="4,52.2" />
-                  <mssgle:LineSegment
-                    End="54,52.2" />
-                  <mssgle:CubicBezierSegment
-                    Point1="54,52.2"
-                    Point2="58,52.2"
-                    Point3="58,56.2" />
-                  <mssgle:LineSegment
-                    End="58,96.9" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="152.8,41.6"
-          Id="Package\Data Flow Task\Derived Column"
-          TopLeft="479,302" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Sort Output]"
-          TopLeft="374.8,247.6">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="180.6,54.4"
-              Start="0,0"
-              End="180.6,46.9">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,23.2" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,23.2"
-                    Point2="0,27.2"
-                    Point3="4,27.2" />
-                  <mssgle:LineSegment
-                    End="176.6,27.2" />
-                  <mssgle:CubicBezierSegment
-                    Point1="176.6,27.2"
-                    Point2="180.6,27.2"
-                    Point3="180.6,31.2" />
-                  <mssgle:LineSegment
-                    End="180.6,46.9" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="170.4,41.6"
-          Id="Package\Data Flow Task\OLE DB Destination"
-          TopLeft="377,390" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Derived Column Output]"
-          TopLeft="555.4,343.6">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-93.2000000000001,46.4"
-              Start="0,0"
-              End="-93.2000000000001,38.9">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,19.2" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,19.2"
-                    Point2="0,23.2"
-                    Point3="-4,23.2" />
-                  <mssgle:LineSegment
-                    End="-89.2000000000001,23.2" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-89.2000000000001,23.2"
-                    Point2="-93.2000000000001,23.2"
-                    Point3="-93.2000000000001,27.2" />
-                  <mssgle:LineSegment
-                    End="-93.2000000000001,38.9" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="158.4,41.6"
-          Id="Package\Data Flow Task\OLE DB Source 1"
-          TopLeft="645,70" />
-        <NodeLayout
-          Size="106.4,41.6"
-          Id="Package\Data Flow Task\Sort 1"
-          TopLeft="763,164" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[OLE DB Source Output1]"
-          TopLeft="724.2,111.6">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="92,52.4"
-              Start="0,0"
-              End="92,44.9">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,22.2" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,22.2"
-                    Point2="0,26.2"
-                    Point3="4,26.2" />
-                  <mssgle:LineSegment
-                    End="88,26.2" />
-                  <mssgle:CubicBezierSegment
-                    Point1="88,26.2"
-                    Point2="92,26.2"
-                    Point3="92,30.2" />
-                  <mssgle:LineSegment
-                    End="92,44.9" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="179.2,41.6"
-          Id="Package\Data Flow Task\OLE DB Destination 1"
-          TopLeft="812,327.4" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Sort Output1]"
-          TopLeft="816.2,205.6">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="85.4,121.8"
-              Start="0,0"
-              End="85.4,114.3">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,56.9" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,56.9"
-                    Point2="0,60.9"
-                    Point3="4,60.9" />
-                  <mssgle:LineSegment
-                    End="81.4,60.9" />
-                  <mssgle:CubicBezierSegment
-                    Point1="81.4,60.9"
-                    Point2="85.4,60.9"
-                    Point3="85.4,64.9" />
-                  <mssgle:LineSegment
-                    End="85.4,114.3" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\Dimensions">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="149.6,41.6"
-          Id="Package\Dimensions\OLE DB Source"
-          TopLeft="144.0714287174,36.5196077358897" />
-        <NodeLayout
-          Size="198.4,41.6"
-          Id="Package\Dimensions\Balanced Data Distributor"
-          TopLeft="150.714289728476,117.960786716061" />
-        <NodeLayout
-          Size="104,41.6"
-          Id="Package\Dimensions\Users"
-          TopLeft="73.0952397374068,212.843141759281" />
-        <EdgeLayout
-          Id="Package\Dimensions.Paths[OLE DB Source Output]"
-          TopLeft="218.8714287174,78.1196077358896">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="31.042861011076,39.841178980171"
-              Start="0,0"
-              End="31.042861011076,32.341178980171">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,15.9205894900855" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,15.9205894900855"
-                    Point2="0,19.9205894900855"
-                    Point3="4,19.9205894900855" />
-                  <mssgle:LineSegment
-                    End="27.042861011076,19.9205894900855" />
-                  <mssgle:CubicBezierSegment
-                    Point1="27.042861011076,19.9205894900855"
-                    Point2="31.042861011076,19.9205894900855"
-                    Point3="31.042861011076,23.9205894900855" />
-                  <mssgle:LineSegment
-                    End="31.042861011076,32.341178980171" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Dimensions.Paths[Balanced Data Distributor Output 1]"
-          TopLeft="218.180956395143,159.560786716061">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-93.0857166577359,53.28235504322"
-              Start="0,0"
-              End="-93.0857166577359,45.78235504322">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,17.5686973214954" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,17.5686973214954"
-                    Point2="0,21.5686973214954"
-                    Point3="-4,21.5686973214954" />
-                  <mssgle:LineSegment
-                    End="-89.0857166577359,21.5686973214954" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-89.0857166577359,21.5686973214954"
-                    Point2="-93.0857166577359,21.5686973214954"
-                    Point3="-93.0857166577359,25.5686973214954" />
-                  <mssgle:LineSegment
-                    End="-93.0857166577359,45.78235504322" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-124.243424735118,26.5686973214954,155.4011328125,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="158.4,41.6"
-          Id="Package\Dimensions\OLE DB Source 1"
-          TopLeft="446,44" />
-        <NodeLayout
-          Size="208,41.6"
-          Id="Package\Dimensions\Balanced Data Distributor 1"
-          TopLeft="601,174" />
-        <EdgeLayout
-          Id="Package\Dimensions.Paths[OLE DB Source Output1]"
-          TopLeft="525.2,85.6">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="179.8,88.4"
-              Start="0,0"
-              End="179.8,80.9">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,40.2" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,40.2"
-                    Point2="0,44.2"
-                    Point3="4,44.2" />
-                  <mssgle:LineSegment
-                    End="175.8,44.2" />
-                  <mssgle:CubicBezierSegment
-                    Point1="175.8,44.2"
-                    Point2="179.8,44.2"
-                    Point3="179.8,48.2" />
-                  <mssgle:LineSegment
-                    End="179.8,80.9" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="105.6,41.6"
-          Id="Package\Dimensions\books"
-          TopLeft="621,289" />
-        <EdgeLayout
-          Id="Package\Dimensions.Paths[Balanced Data Distributor Output 11]"
-          TopLeft="705,215.6">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-31.2,73.4"
-              Start="0,0"
-              End="-31.2,65.9">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,32.7" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,32.7"
-                    Point2="0,36.7"
-                    Point3="-4,36.7" />
-                  <mssgle:LineSegment
-                    End="-27.2,36.7" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-27.2,36.7"
-                    Point2="-31.2,36.7"
-                    Point3="-31.2,40.7" />
-                  <mssgle:LineSegment
-                    End="-31.2,65.9" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-93.30056640625,41.7,155.4011328125,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
   <PipelineComponentMetadata
     design-time-name="Package\Dimensions\Users">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\OLE DB Source 1">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\OLE DB Destination 1">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Dimensions\OLE DB Source 1">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Dimensions\books">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
