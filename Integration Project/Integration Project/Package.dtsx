@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="145"
-  DTS:VersionGUID="{3ADE1F89-8AFA-4CD5-8BAE-37FE468239AD}">
+  DTS:VersionBuild="157"
+  DTS:VersionGUID="{63A6E3F0-7D36-4F6E-A346-9CE302939C4F}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1397,7 +1397,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[Users3]</property>
+                  name="OpenRowset">[dbo].[Users3]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -1487,6 +1487,14 @@
                       externalMetadataColumnId="Package\Edit Dimensions\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[country]"
                       lineageId="Package\Edit Dimensions\Sort.Outputs[Sort Output].Columns[country]" />
                     <inputColumn
+                      refId="Package\Edit Dimensions\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[age]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="age"
+                      externalMetadataColumnId="Package\Edit Dimensions\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Sort.age]"
+                      lineageId="Package\Edit Dimensions\Sort.Outputs[Sort Output].Columns[age]" />
+                    <inputColumn
                       refId="Package\Edit Dimensions\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[fullName]"
                       cachedCodepage="1252"
                       cachedDataType="str"
@@ -1509,18 +1517,18 @@
                       externalMetadataColumnId="Package\Edit Dimensions\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LastName]"
                       lineageId="Package\Edit Dimensions\Derived Column.Outputs[Derived Column Output].Columns[LastName]" />
                     <inputColumn
-                      refId="Package\Edit Dimensions\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[age]"
+                      refId="Package\Edit Dimensions\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[age1]"
                       cachedDataType="ui2"
                       cachedName="age"
-                      externalMetadataColumnId="Package\Edit Dimensions\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[age]"
+                      externalMetadataColumnId="Package\Edit Dimensions\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Data Conversion.age]"
                       lineageId="Package\Edit Dimensions\Data Conversion.Outputs[Data Conversion Output].Columns[age]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Edit Dimensions\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[id]"
+                      refId="Package\Edit Dimensions\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[userID]"
                       dataType="i4"
-                      name="id" />
+                      name="userID" />
                     <externalMetadataColumn
                       refId="Package\Edit Dimensions\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[user_id]"
                       codePage="1252"
@@ -1546,6 +1554,12 @@
                       length="255"
                       name="country" />
                     <externalMetadataColumn
+                      refId="Package\Edit Dimensions\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Sort.age]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="Sort.age" />
+                    <externalMetadataColumn
                       refId="Package\Edit Dimensions\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[fullName]"
                       codePage="1252"
                       dataType="str"
@@ -1562,9 +1576,9 @@
                       length="255"
                       name="LastName" />
                     <externalMetadataColumn
-                      refId="Package\Edit Dimensions\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[age]"
+                      refId="Package\Edit Dimensions\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Data Conversion.age]"
                       dataType="i4"
-                      name="age" />
+                      name="Data Conversion.age" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -1609,7 +1623,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[Books2]</property>
+                  name="OpenRowset">[dbo].[Books2]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -1726,10 +1740,6 @@
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Edit Dimensions\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[id]"
-                      dataType="i4"
-                      name="id" />
-                    <externalMetadataColumn
                       refId="Package\Edit Dimensions\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[isbn]"
                       codePage="1252"
                       dataType="str"
@@ -1772,11 +1782,9 @@
                       length="255"
                       name="Category" />
                     <externalMetadataColumn
-                      refId="Package\Edit Dimensions\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Status]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      name="Status" />
+                      refId="Package\Edit Dimensions\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[bookID]"
+                      dataType="i4"
+                      name="bookID" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -3018,7 +3026,7 @@
                   expressionType="Notify"
                   name="SqlCommandParam"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[Books2]) [refTable]
-where [refTable].[id] = ?</property>
+where [refTable].[bookID] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the type of connection used to access the reference dataset."
@@ -3049,7 +3057,7 @@ where [refTable].[id] = ?</property>
                 <property
                   dataType="System.String"
                   description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="id" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="isbn" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="book_title" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="book_author" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="year_of_publication" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="publisher" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Language" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Category" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="bookID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="isbn" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="book_title" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="book_author" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="year_of_publication" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="publisher" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Language" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Category" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
@@ -3089,11 +3097,11 @@ where [refTable].[id] = ?</property>
                         <property
                           dataType="System.String"
                           description="Specifies the column in the reference table that a column joins."
-                          name="JoinToReferenceColumn">id</property>
+                          name="JoinToReferenceColumn">bookID</property>
                         <property
                           dataType="System.String"
                           description="Specifies the column in the reference table from which a column is copied."
-                          name="CopyFromReferenceColumn">id</property>
+                          name="CopyFromReferenceColumn">bookID</property>
                       </properties>
                     </inputColumn>
                   </inputColumns>
@@ -3163,7 +3171,7 @@ where [refTable].[id] = ?</property>
                   expressionType="Notify"
                   name="SqlCommandParam"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[Books2]) [refTable]
-where [refTable].[id] = ?</property>
+where [refTable].[bookID] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the type of connection used to access the reference dataset."
@@ -3173,7 +3181,7 @@ where [refTable].[id] = ?</property>
                   dataType="System.Int32"
                   description="Specifies the cache type of the lookup table."
                   name="CacheType"
-                  typeConverter="CacheType">0</property>
+                  typeConverter="CacheType">2</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
@@ -3194,7 +3202,7 @@ where [refTable].[id] = ?</property>
                 <property
                   dataType="System.String"
                   description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="id" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="isbn" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="book_title" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="book_author" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="year_of_publication" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="publisher" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Language" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Category" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="bookID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="isbn" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="book_title" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="book_author" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="year_of_publication" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="publisher" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Language" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Category" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
@@ -3234,11 +3242,11 @@ where [refTable].[id] = ?</property>
                         <property
                           dataType="System.String"
                           description="Specifies the column in the reference table that a column joins."
-                          name="JoinToReferenceColumn">id</property>
+                          name="JoinToReferenceColumn">bookID</property>
                         <property
                           dataType="System.String"
                           description="Specifies the column in the reference table from which a column is copied."
-                          name="CopyFromReferenceColumn">id</property>
+                          name="CopyFromReferenceColumn">bookID</property>
                       </properties>
                     </inputColumn>
                   </inputColumns>
@@ -3542,12 +3550,6 @@ where [refTable].[id] = ?</property>
                       cachedName="ratingRelevance"
                       externalMetadataColumnId="Package\Fact\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[ratingRelevance]"
                       lineageId="Package\Fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[ratingRelevance]" />
-                    <inputColumn
-                      refId="Package\Fact\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[timeID]"
-                      cachedDataType="i4"
-                      cachedName="timeID"
-                      externalMetadataColumnId="Package\Fact\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[timeID]"
-                      lineageId="Package\Fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[timeID]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -3574,9 +3576,9 @@ where [refTable].[id] = ?</property>
                       dataType="i4"
                       name="ratingRelevance" />
                     <externalMetadataColumn
-                      refId="Package\Fact\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[timeID]"
+                      refId="Package\Fact\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[DateKey]"
                       dataType="i4"
-                      name="timeID" />
+                      name="DateKey" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -3630,7 +3632,7 @@ where [refTable].[id] = ?</property>
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT [Books2].id AS bookID, [Users3].id AS userID, [Staging Table].rating, [Staging Table].ratingRelevance, [Staging Table].timeID
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT [Books2].bookID AS bookID, [Users3].userID AS userID, [Staging Table].rating, [Staging Table].ratingRelevance, [Staging Table].timeID
 FROM Books2 INNER JOIN [Staging Table] ON Books2.isbn = [Staging Table].isbn INNER JOIN [Users3] ON [Users3].user_id LIKE [Staging Table].user_id</property>
                 <property
                   dataType="System.String"
@@ -3815,7 +3817,7 @@ FROM Books2 INNER JOIN [Staging Table] ON Books2.isbn = [Staging Table].isbn INN
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT [Books2].id AS bookID, [Users3].id AS userID, [Staging Table].price, [Staging Table].quantity, [Staging Table].timeIDSale
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT [Books2].bookID AS bookID, [Users3].userID AS userID, [Staging Table].price, [Staging Table].quantity, [Staging Table].timeIDSale
 FROM Books2 INNER JOIN [Staging Table] ON Books2.isbn = [Staging Table].isbn INNER JOIN [Users3] ON [Users3].user_id LIKE [Staging Table].user_id</property>
                 <property
                   dataType="System.String"
@@ -4280,7 +4282,7 @@ where [refTable].[DateKey] = ?</property>
                   expressionType="Notify"
                   name="SqlCommandParam"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[Users3]) [refTable]
-where [refTable].[id] = ?</property>
+where [refTable].[userID] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the type of connection used to access the reference dataset."
@@ -4311,7 +4313,7 @@ where [refTable].[id] = ?</property>
                 <property
                   dataType="System.String"
                   description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="id" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="user_id" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="city" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="state" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="country" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="fullName" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="FirstName" dataType="DT_WSTR" length="255" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="LastName" dataType="DT_WSTR" length="255" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="age" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="userID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="user_id" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="city" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="state" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="country" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Sort.age" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="fullName" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="FirstName" dataType="DT_WSTR" length="255" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="LastName" dataType="DT_WSTR" length="255" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Data Conversion.age" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
@@ -4351,11 +4353,11 @@ where [refTable].[id] = ?</property>
                         <property
                           dataType="System.String"
                           description="Specifies the column in the reference table that a column joins."
-                          name="JoinToReferenceColumn">id</property>
+                          name="JoinToReferenceColumn">userID</property>
                         <property
                           dataType="System.String"
                           description="Specifies the column in the reference table from which a column is copied."
-                          name="CopyFromReferenceColumn">id</property>
+                          name="CopyFromReferenceColumn">userID</property>
                       </properties>
                     </inputColumn>
                   </inputColumns>
@@ -4425,7 +4427,7 @@ where [refTable].[id] = ?</property>
                   expressionType="Notify"
                   name="SqlCommandParam"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[Users3]) [refTable]
-where [refTable].[id] = ?</property>
+where [refTable].[userID] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the type of connection used to access the reference dataset."
@@ -4456,7 +4458,7 @@ where [refTable].[id] = ?</property>
                 <property
                   dataType="System.String"
                   description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="id" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="user_id" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="city" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="state" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="country" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="fullName" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="FirstName" dataType="DT_WSTR" length="255" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="LastName" dataType="DT_WSTR" length="255" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="age" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="userID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="user_id" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="city" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="state" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="country" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Sort.age" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="fullName" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="FirstName" dataType="DT_WSTR" length="255" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="LastName" dataType="DT_WSTR" length="255" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Data Conversion.age" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
@@ -4490,18 +4492,17 @@ where [refTable].[id] = ?</property>
                       cachedName="userID"
                       errorOrTruncationOperation="Copy Column"
                       lineageId="Package\Fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[userID]"
-                      name="userID"
                       truncationRowDisposition="FailComponent"
                       usageType="readWrite">
                       <properties>
                         <property
                           dataType="System.String"
                           description="Specifies the column in the reference table that a column joins."
-                          name="JoinToReferenceColumn">id</property>
+                          name="JoinToReferenceColumn">userID</property>
                         <property
                           dataType="System.String"
                           description="Specifies the column in the reference table from which a column is copied."
-                          name="CopyFromReferenceColumn">id</property>
+                          name="CopyFromReferenceColumn">userID</property>
                       </properties>
                     </inputColumn>
                   </inputColumns>
@@ -5599,6 +5600,40 @@ where [refTable].[id] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="456.000006301063,219.094118408514">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-282.857147333574,43.964708810198"
+              Start="0,0"
+              End="-282.857147333574,36.464708810198">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17.982354405099" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,17.982354405099"
+                    Point2="0,21.982354405099"
+                    Point3="-4,21.982354405099" />
+                  <mssgle:LineSegment
+                    End="-278.857147333574,21.982354405099" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-278.857147333574,21.982354405099"
+                    Point2="-282.857147333574,21.982354405099"
+                    Point3="-282.857147333574,25.982354405099" />
+                  <mssgle:LineSegment
+                    End="-282.857147333574,36.464708810198" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 4]"
           TopLeft="239.142858967489,289.458827218712">
           <EdgeLayout.Curve>
@@ -5666,40 +5701,6 @@ where [refTable].[id] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 3]"
-          TopLeft="456.000006301063,219.094118408514">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-282.857147333574,43.964708810198"
-              Start="0,0"
-              End="-282.857147333574,36.464708810198">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,17.982354405099" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,17.982354405099"
-                    Point2="0,21.982354405099"
-                    Point3="-4,21.982354405099" />
-                  <mssgle:LineSegment
-                    End="-278.857147333574,21.982354405099" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-278.857147333574,21.982354405099"
-                    Point2="-282.857147333574,21.982354405099"
-                    Point3="-282.857147333574,25.982354405099" />
-                  <mssgle:LineSegment
-                    End="-282.857147333574,36.464708810198" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -5707,7 +5708,7 @@ where [refTable].[id] = ?</property>
     design-time-name="Package\Dimensions">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="120,41.6"
           Id="Package\Dimensions\Multicast"
@@ -5743,9 +5744,7 @@ where [refTable].[id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -5779,9 +5778,7 @@ where [refTable].[id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -5815,9 +5812,7 @@ where [refTable].[id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -5853,7 +5848,7 @@ where [refTable].[id] = ?</property>
     design-time-name="Package\Edit Dimensions">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="97.6,41.6"
           Id="Package\Edit Dimensions\Sort"
@@ -5917,9 +5912,7 @@ where [refTable].[id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -5953,9 +5946,7 @@ where [refTable].[id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -5989,9 +5980,7 @@ where [refTable].[id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6025,9 +6014,7 @@ where [refTable].[id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6061,9 +6048,7 @@ where [refTable].[id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6097,9 +6082,7 @@ where [refTable].[id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -6491,7 +6474,7 @@ where [refTable].[id] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -6501,7 +6484,7 @@ where [refTable].[id] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -6514,7 +6497,7 @@ where [refTable].[id] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -6560,7 +6543,7 @@ where [refTable].[id] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -6570,7 +6553,7 @@ where [refTable].[id] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -6583,7 +6566,7 @@ where [refTable].[id] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -6593,7 +6576,7 @@ where [refTable].[id] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -6648,7 +6631,7 @@ where [refTable].[id] = ?</property>
     design-time-name="Package\Staging Task">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="170.4,41.6"
           Id="Package\Staging Task\OLE DB Destination"
@@ -6688,9 +6671,7 @@ where [refTable].[id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>

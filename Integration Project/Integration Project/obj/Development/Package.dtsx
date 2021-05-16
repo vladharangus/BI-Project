@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="144"
-  DTS:VersionGUID="{9C7911AF-B336-47FA-B77E-7DFCDB83F388}">
+  DTS:VersionBuild="157"
+  DTS:VersionGUID="{63A6E3F0-7D36-4F6E-A346-9CE302939C4F}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1397,7 +1397,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[Users3]</property>
+                  name="OpenRowset">[dbo].[Users3]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -1487,6 +1487,14 @@
                       externalMetadataColumnId="Package\Edit Dimensions\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[country]"
                       lineageId="Package\Edit Dimensions\Sort.Outputs[Sort Output].Columns[country]" />
                     <inputColumn
+                      refId="Package\Edit Dimensions\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[age]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="age"
+                      externalMetadataColumnId="Package\Edit Dimensions\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Sort.age]"
+                      lineageId="Package\Edit Dimensions\Sort.Outputs[Sort Output].Columns[age]" />
+                    <inputColumn
                       refId="Package\Edit Dimensions\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[fullName]"
                       cachedCodepage="1252"
                       cachedDataType="str"
@@ -1509,18 +1517,18 @@
                       externalMetadataColumnId="Package\Edit Dimensions\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LastName]"
                       lineageId="Package\Edit Dimensions\Derived Column.Outputs[Derived Column Output].Columns[LastName]" />
                     <inputColumn
-                      refId="Package\Edit Dimensions\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[age]"
+                      refId="Package\Edit Dimensions\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[age1]"
                       cachedDataType="ui2"
                       cachedName="age"
-                      externalMetadataColumnId="Package\Edit Dimensions\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[age]"
+                      externalMetadataColumnId="Package\Edit Dimensions\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Data Conversion.age]"
                       lineageId="Package\Edit Dimensions\Data Conversion.Outputs[Data Conversion Output].Columns[age]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Edit Dimensions\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[id]"
+                      refId="Package\Edit Dimensions\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[userID]"
                       dataType="i4"
-                      name="id" />
+                      name="userID" />
                     <externalMetadataColumn
                       refId="Package\Edit Dimensions\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[user_id]"
                       codePage="1252"
@@ -1546,6 +1554,12 @@
                       length="255"
                       name="country" />
                     <externalMetadataColumn
+                      refId="Package\Edit Dimensions\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Sort.age]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="Sort.age" />
+                    <externalMetadataColumn
                       refId="Package\Edit Dimensions\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[fullName]"
                       codePage="1252"
                       dataType="str"
@@ -1562,9 +1576,9 @@
                       length="255"
                       name="LastName" />
                     <externalMetadataColumn
-                      refId="Package\Edit Dimensions\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[age]"
+                      refId="Package\Edit Dimensions\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Data Conversion.age]"
                       dataType="i4"
-                      name="age" />
+                      name="Data Conversion.age" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -1609,7 +1623,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[Books2]</property>
+                  name="OpenRowset">[dbo].[Books2]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -1726,10 +1740,6 @@
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Edit Dimensions\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[id]"
-                      dataType="i4"
-                      name="id" />
-                    <externalMetadataColumn
                       refId="Package\Edit Dimensions\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[isbn]"
                       codePage="1252"
                       dataType="str"
@@ -1772,11 +1782,9 @@
                       length="255"
                       name="Category" />
                     <externalMetadataColumn
-                      refId="Package\Edit Dimensions\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Status]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      name="Status" />
+                      refId="Package\Edit Dimensions\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[bookID]"
+                      dataType="i4"
+                      name="bookID" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -3018,7 +3026,7 @@
                   expressionType="Notify"
                   name="SqlCommandParam"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[Books2]) [refTable]
-where [refTable].[id] = ?</property>
+where [refTable].[bookID] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the type of connection used to access the reference dataset."
@@ -3049,7 +3057,7 @@ where [refTable].[id] = ?</property>
                 <property
                   dataType="System.String"
                   description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="id" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="isbn" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="book_title" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="book_author" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="year_of_publication" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="publisher" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Language" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Category" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="bookID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="isbn" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="book_title" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="book_author" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="year_of_publication" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="publisher" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Language" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Category" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
@@ -3089,11 +3097,11 @@ where [refTable].[id] = ?</property>
                         <property
                           dataType="System.String"
                           description="Specifies the column in the reference table that a column joins."
-                          name="JoinToReferenceColumn">id</property>
+                          name="JoinToReferenceColumn">bookID</property>
                         <property
                           dataType="System.String"
                           description="Specifies the column in the reference table from which a column is copied."
-                          name="CopyFromReferenceColumn">id</property>
+                          name="CopyFromReferenceColumn">bookID</property>
                       </properties>
                     </inputColumn>
                   </inputColumns>
@@ -3163,7 +3171,7 @@ where [refTable].[id] = ?</property>
                   expressionType="Notify"
                   name="SqlCommandParam"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[Books2]) [refTable]
-where [refTable].[id] = ?</property>
+where [refTable].[bookID] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the type of connection used to access the reference dataset."
@@ -3173,7 +3181,7 @@ where [refTable].[id] = ?</property>
                   dataType="System.Int32"
                   description="Specifies the cache type of the lookup table."
                   name="CacheType"
-                  typeConverter="CacheType">0</property>
+                  typeConverter="CacheType">2</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
@@ -3194,7 +3202,7 @@ where [refTable].[id] = ?</property>
                 <property
                   dataType="System.String"
                   description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="id" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="isbn" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="book_title" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="book_author" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="year_of_publication" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="publisher" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Language" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Category" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="bookID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="isbn" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="book_title" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="book_author" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="year_of_publication" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="publisher" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Language" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Category" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
@@ -3234,11 +3242,11 @@ where [refTable].[id] = ?</property>
                         <property
                           dataType="System.String"
                           description="Specifies the column in the reference table that a column joins."
-                          name="JoinToReferenceColumn">id</property>
+                          name="JoinToReferenceColumn">bookID</property>
                         <property
                           dataType="System.String"
                           description="Specifies the column in the reference table from which a column is copied."
-                          name="CopyFromReferenceColumn">id</property>
+                          name="CopyFromReferenceColumn">bookID</property>
                       </properties>
                     </inputColumn>
                   </inputColumns>
@@ -3542,12 +3550,6 @@ where [refTable].[id] = ?</property>
                       cachedName="ratingRelevance"
                       externalMetadataColumnId="Package\Fact\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[ratingRelevance]"
                       lineageId="Package\Fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[ratingRelevance]" />
-                    <inputColumn
-                      refId="Package\Fact\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[timeID]"
-                      cachedDataType="i4"
-                      cachedName="timeID"
-                      externalMetadataColumnId="Package\Fact\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[timeID]"
-                      lineageId="Package\Fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[timeID]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -3574,9 +3576,9 @@ where [refTable].[id] = ?</property>
                       dataType="i4"
                       name="ratingRelevance" />
                     <externalMetadataColumn
-                      refId="Package\Fact\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[timeID]"
+                      refId="Package\Fact\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[DateKey]"
                       dataType="i4"
-                      name="timeID" />
+                      name="DateKey" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -3630,7 +3632,7 @@ where [refTable].[id] = ?</property>
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT [Books2].id AS bookID, [Users3].id AS userID, [Staging Table].rating, [Staging Table].ratingRelevance, [Staging Table].timeID
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT [Books2].bookID AS bookID, [Users3].userID AS userID, [Staging Table].rating, [Staging Table].ratingRelevance, [Staging Table].timeID
 FROM Books2 INNER JOIN [Staging Table] ON Books2.isbn = [Staging Table].isbn INNER JOIN [Users3] ON [Users3].user_id LIKE [Staging Table].user_id</property>
                 <property
                   dataType="System.String"
@@ -3815,7 +3817,7 @@ FROM Books2 INNER JOIN [Staging Table] ON Books2.isbn = [Staging Table].isbn INN
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT [Books2].id AS bookID, [Users3].id AS userID, [Staging Table].price, [Staging Table].quantity, [Staging Table].timeIDSale
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT [Books2].bookID AS bookID, [Users3].userID AS userID, [Staging Table].price, [Staging Table].quantity, [Staging Table].timeIDSale
 FROM Books2 INNER JOIN [Staging Table] ON Books2.isbn = [Staging Table].isbn INNER JOIN [Users3] ON [Users3].user_id LIKE [Staging Table].user_id</property>
                 <property
                   dataType="System.String"
@@ -4280,7 +4282,7 @@ where [refTable].[DateKey] = ?</property>
                   expressionType="Notify"
                   name="SqlCommandParam"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[Users3]) [refTable]
-where [refTable].[id] = ?</property>
+where [refTable].[userID] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the type of connection used to access the reference dataset."
@@ -4311,7 +4313,7 @@ where [refTable].[id] = ?</property>
                 <property
                   dataType="System.String"
                   description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="id" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="user_id" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="city" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="state" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="country" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="fullName" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="FirstName" dataType="DT_WSTR" length="255" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="LastName" dataType="DT_WSTR" length="255" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="age" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="userID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="user_id" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="city" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="state" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="country" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Sort.age" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="fullName" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="FirstName" dataType="DT_WSTR" length="255" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="LastName" dataType="DT_WSTR" length="255" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Data Conversion.age" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
@@ -4351,11 +4353,11 @@ where [refTable].[id] = ?</property>
                         <property
                           dataType="System.String"
                           description="Specifies the column in the reference table that a column joins."
-                          name="JoinToReferenceColumn">id</property>
+                          name="JoinToReferenceColumn">userID</property>
                         <property
                           dataType="System.String"
                           description="Specifies the column in the reference table from which a column is copied."
-                          name="CopyFromReferenceColumn">id</property>
+                          name="CopyFromReferenceColumn">userID</property>
                       </properties>
                     </inputColumn>
                   </inputColumns>
@@ -4425,7 +4427,7 @@ where [refTable].[id] = ?</property>
                   expressionType="Notify"
                   name="SqlCommandParam"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[Users3]) [refTable]
-where [refTable].[id] = ?</property>
+where [refTable].[userID] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the type of connection used to access the reference dataset."
@@ -4456,7 +4458,7 @@ where [refTable].[id] = ?</property>
                 <property
                   dataType="System.String"
                   description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="id" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="user_id" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="city" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="state" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="country" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="fullName" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="FirstName" dataType="DT_WSTR" length="255" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="LastName" dataType="DT_WSTR" length="255" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="age" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="userID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="user_id" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="city" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="state" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="country" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Sort.age" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="fullName" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="FirstName" dataType="DT_WSTR" length="255" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="LastName" dataType="DT_WSTR" length="255" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Data Conversion.age" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
@@ -4490,18 +4492,17 @@ where [refTable].[id] = ?</property>
                       cachedName="userID"
                       errorOrTruncationOperation="Copy Column"
                       lineageId="Package\Fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[userID]"
-                      name="userID"
                       truncationRowDisposition="FailComponent"
                       usageType="readWrite">
                       <properties>
                         <property
                           dataType="System.String"
                           description="Specifies the column in the reference table that a column joins."
-                          name="JoinToReferenceColumn">id</property>
+                          name="JoinToReferenceColumn">userID</property>
                         <property
                           dataType="System.String"
                           description="Specifies the column in the reference table from which a column is copied."
-                          name="CopyFromReferenceColumn">id</property>
+                          name="CopyFromReferenceColumn">userID</property>
                       </properties>
                     </inputColumn>
                   </inputColumns>
@@ -4592,1503 +4593,6 @@ where [refTable].[id] = ?</property>
               endId="Package\Fact\BookIDR.Inputs[Lookup Input]"
               name="OLE DB Source Output"
               startId="Package\Fact\OLE DB Source.Outputs[OLE DB Source Output]" />
-          </paths>
-        </pipeline>
-      </DTS:ObjectData>
-    </DTS:Executable>
-    <DTS:Executable
-      DTS:refId="Package\SCD"
-      DTS:CreationName="Microsoft.Pipeline"
-      DTS:Description="Data Flow Task"
-      DTS:DTSID="{C9ADB3B7-79BC-43BB-8D24-7385D079FAE0}"
-      DTS:ExecutableType="Microsoft.Pipeline"
-      DTS:LocaleID="-1"
-      DTS:ObjectName="SCD"
-      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
-      <DTS:Variables />
-      <DTS:ObjectData>
-        <pipeline
-          version="1">
-          <components>
-            <component
-              refId="Package\SCD\Derived Column"
-              componentClassID="Microsoft.DerivedColumn"
-              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
-              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
-              name="Derived Column"
-              usesDispositions="true">
-              <inputs>
-                <input
-                  refId="Package\SCD\Derived Column.Inputs[Derived Column Input]"
-                  description="Input to the Derived Column Transformation"
-                  name="Derived Column Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\SCD\Derived Column.Inputs[Derived Column Input].Columns[Status]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="Status"
-                      errorOrTruncationOperation="Computation"
-                      errorRowDisposition="FailComponent"
-                      lineageId="Package\SCD\OLE DB Source.Outputs[OLE DB Source Output].Columns[Status]"
-                      truncationRowDisposition="FailComponent"
-                      usageType="readWrite">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Expression"
-                          name="Expression">(DT_STR,255,1252)("Expired")</property>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Friendly Expression"
-                          expressionType="Notify"
-                          name="FriendlyExpression">(DT_STR,255,1252)("Expired")</property>
-                      </properties>
-                    </inputColumn>
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\SCD\Derived Column.Outputs[Derived Column Output]"
-                  description="Default Output of the Derived Column Transformation"
-                  exclusionGroup="1"
-                  name="Derived Column Output"
-                  synchronousInputId="Package\SCD\Derived Column.Inputs[Derived Column Input]">
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\SCD\Derived Column.Outputs[Derived Column Error Output]"
-                  description="Error Output of the Derived Column Transformation"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Derived Column Error Output"
-                  synchronousInputId="Package\SCD\Derived Column.Inputs[Derived Column Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\SCD\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\SCD\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\SCD\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\SCD\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\SCD\Derived Column 1"
-              componentClassID="Microsoft.DerivedColumn"
-              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
-              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
-              name="Derived Column 1"
-              usesDispositions="true">
-              <inputs>
-                <input
-                  refId="Package\SCD\Derived Column 1.Inputs[Derived Column Input]"
-                  description="Input to the Derived Column Transformation"
-                  name="Derived Column Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\SCD\Derived Column 1.Inputs[Derived Column Input].Columns[Status]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="Status"
-                      errorOrTruncationOperation="Computation"
-                      errorRowDisposition="FailComponent"
-                      lineageId="Package\SCD\Union All.Outputs[Union All Output 1].Columns[Status]"
-                      truncationRowDisposition="FailComponent"
-                      usageType="readWrite">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Expression"
-                          name="Expression">(DT_STR,255,1252)("Current")</property>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Friendly Expression"
-                          expressionType="Notify"
-                          name="FriendlyExpression">(DT_STR,255,1252)("Current")</property>
-                      </properties>
-                    </inputColumn>
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\SCD\Derived Column 1.Outputs[Derived Column Output]"
-                  description="Default Output of the Derived Column Transformation"
-                  exclusionGroup="1"
-                  name="Derived Column Output"
-                  synchronousInputId="Package\SCD\Derived Column 1.Inputs[Derived Column Input]">
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\SCD\Derived Column 1.Outputs[Derived Column Error Output]"
-                  description="Error Output of the Derived Column Transformation"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Derived Column Error Output"
-                  synchronousInputId="Package\SCD\Derived Column 1.Inputs[Derived Column Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\SCD\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\SCD\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\SCD\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\SCD\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\SCD\Insert Destination"
-              componentClassID="Microsoft.OLEDBDestination"
-              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
-              description="OLE DB Destination"
-              name="Insert Destination"
-              usesDispositions="true"
-              version="4">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[Books2]</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the variable that contains the name of the database object used to open a rowset."
-                  name="OpenRowsetVariable"></property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Forces the use of the DefaultCodePage property value when describing character data."
-                  name="AlwaysUseDefaultCodePage">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the mode used to access the database."
-                  name="AccessMode"
-                  typeConverter="AccessMode">0</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepIdentity">false</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepNulls">false</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
-                  name="FastLoadMaxInsertCommitSize">2147483647</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\SCD\Insert Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-1NBNSDK\SQLEXPRESS.DataWarehouse]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-1NBNSDK\SQLEXPRESS.DataWarehouse]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\SCD\Insert Destination.Inputs[OLE DB Destination Input]"
-                  errorOrTruncationOperation="Insert"
-                  errorRowDisposition="FailComponent"
-                  hasSideEffects="true"
-                  name="OLE DB Destination Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\SCD\Insert Destination.Inputs[OLE DB Destination Input].Columns[isbn]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="isbn"
-                      externalMetadataColumnId="Package\SCD\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[isbn]"
-                      lineageId="Package\SCD\Union All.Outputs[Union All Output 1].Columns[isbn]" />
-                    <inputColumn
-                      refId="Package\SCD\Insert Destination.Inputs[OLE DB Destination Input].Columns[book_title]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="book_title"
-                      externalMetadataColumnId="Package\SCD\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[book_title]"
-                      lineageId="Package\SCD\Union All.Outputs[Union All Output 1].Columns[book_title]" />
-                    <inputColumn
-                      refId="Package\SCD\Insert Destination.Inputs[OLE DB Destination Input].Columns[book_author]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="book_author"
-                      externalMetadataColumnId="Package\SCD\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[book_author]"
-                      lineageId="Package\SCD\Union All.Outputs[Union All Output 1].Columns[book_author]" />
-                    <inputColumn
-                      refId="Package\SCD\Insert Destination.Inputs[OLE DB Destination Input].Columns[year_of_publication]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="year_of_publication"
-                      externalMetadataColumnId="Package\SCD\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[year_of_publication]"
-                      lineageId="Package\SCD\Union All.Outputs[Union All Output 1].Columns[year_of_publication]" />
-                    <inputColumn
-                      refId="Package\SCD\Insert Destination.Inputs[OLE DB Destination Input].Columns[publisher]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="publisher"
-                      externalMetadataColumnId="Package\SCD\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[publisher]"
-                      lineageId="Package\SCD\Union All.Outputs[Union All Output 1].Columns[publisher]" />
-                    <inputColumn
-                      refId="Package\SCD\Insert Destination.Inputs[OLE DB Destination Input].Columns[Language]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="Language"
-                      externalMetadataColumnId="Package\SCD\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Language]"
-                      lineageId="Package\SCD\Union All.Outputs[Union All Output 1].Columns[Language]" />
-                    <inputColumn
-                      refId="Package\SCD\Insert Destination.Inputs[OLE DB Destination Input].Columns[Category]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="Category"
-                      externalMetadataColumnId="Package\SCD\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Category]"
-                      lineageId="Package\SCD\Union All.Outputs[Union All Output 1].Columns[Category]" />
-                    <inputColumn
-                      refId="Package\SCD\Insert Destination.Inputs[OLE DB Destination Input].Columns[Status]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="Status"
-                      externalMetadataColumnId="Package\SCD\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Status]"
-                      lineageId="Package\SCD\Union All.Outputs[Union All Output 1].Columns[Status]" />
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\SCD\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[id]"
-                      dataType="i4"
-                      name="id" />
-                    <externalMetadataColumn
-                      refId="Package\SCD\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[isbn]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      name="isbn" />
-                    <externalMetadataColumn
-                      refId="Package\SCD\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[book_title]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      name="book_title" />
-                    <externalMetadataColumn
-                      refId="Package\SCD\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[book_author]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      name="book_author" />
-                    <externalMetadataColumn
-                      refId="Package\SCD\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[year_of_publication]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      name="year_of_publication" />
-                    <externalMetadataColumn
-                      refId="Package\SCD\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[publisher]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      name="publisher" />
-                    <externalMetadataColumn
-                      refId="Package\SCD\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Language]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      name="Language" />
-                    <externalMetadataColumn
-                      refId="Package\SCD\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Category]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      name="Category" />
-                    <externalMetadataColumn
-                      refId="Package\SCD\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Status]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      name="Status" />
-                  </externalMetadataColumns>
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\SCD\Insert Destination.Outputs[OLE DB Destination Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\SCD\Insert Destination.Inputs[OLE DB Destination Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\SCD\Insert Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\SCD\Insert Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\SCD\Insert Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\SCD\Insert Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\SCD\OLE DB Command"
-              componentClassID="Microsoft.OLEDBCommand"
-              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
-              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
-              name="OLE DB Command"
-              usesDispositions="true"
-              version="2">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  expressionType="Notify"
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">UPDATE [dbo].[Books2] SET [Status] = ? WHERE [isbn] = ? AND [Status] = 'Current'</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\SCD\OLE DB Command.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-1NBNSDK\SQLEXPRESS.DataWarehouse]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-1NBNSDK\SQLEXPRESS.DataWarehouse]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\SCD\OLE DB Command.Inputs[OLE DB Command Input]"
-                  errorOrTruncationOperation="Command Execution"
-                  errorRowDisposition="FailComponent"
-                  hasSideEffects="true"
-                  name="OLE DB Command Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\SCD\OLE DB Command.Inputs[OLE DB Command Input].Columns[isbn]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="isbn"
-                      externalMetadataColumnId="Package\SCD\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
-                      lineageId="Package\SCD\OLE DB Source.Outputs[OLE DB Source Output].Columns[isbn]" />
-                    <inputColumn
-                      refId="Package\SCD\OLE DB Command.Inputs[OLE DB Command Input].Columns[Status]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="Status"
-                      externalMetadataColumnId="Package\SCD\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
-                      lineageId="Package\SCD\OLE DB Source.Outputs[OLE DB Source Output].Columns[Status]" />
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\SCD\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      name="Param_0">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">65</property>
-                      </properties>
-                    </externalMetadataColumn>
-                    <externalMetadataColumn
-                      refId="Package\SCD\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      name="Param_1">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">65</property>
-                      </properties>
-                    </externalMetadataColumn>
-                  </externalMetadataColumns>
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\SCD\OLE DB Command.Outputs[OLE DB Command Output]"
-                  exclusionGroup="1"
-                  name="OLE DB Command Output"
-                  synchronousInputId="Package\SCD\OLE DB Command.Inputs[OLE DB Command Input]">
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\SCD\OLE DB Command.Outputs[OLE DB Command Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="OLE DB Command Error Output"
-                  synchronousInputId="Package\SCD\OLE DB Command.Inputs[OLE DB Command Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\SCD\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\SCD\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\SCD\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\SCD\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\SCD\OLE DB Source"
-              componentClassID="Microsoft.OLEDBSource"
-              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
-              description="OLE DB Source"
-              name="OLE DB Source"
-              usesDispositions="true"
-              version="7">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[Books2]</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the variable that contains the name of the database object used to open a rowset."
-                  name="OpenRowsetVariable"></property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
-                <property
-                  dataType="System.String"
-                  description="The variable that contains the SQL command to be executed."
-                  name="SqlCommandVariable"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Forces the use of the DefaultCodePage property value when describing character data."
-                  name="AlwaysUseDefaultCodePage">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the mode used to access the database."
-                  name="AccessMode"
-                  typeConverter="AccessMode">0</property>
-                <property
-                  dataType="System.String"
-                  description="The mappings between the parameters in the SQL command and variables."
-                  name="ParameterMapping"></property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\SCD\OLE DB Source.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-1NBNSDK\SQLEXPRESS.DataWarehouse]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-1NBNSDK\SQLEXPRESS.DataWarehouse]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <outputs>
-                <output
-                  refId="Package\SCD\OLE DB Source.Outputs[OLE DB Source Output]"
-                  name="OLE DB Source Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\SCD\OLE DB Source.Outputs[OLE DB Source Output].Columns[id]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\SCD\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[id]"
-                      lineageId="Package\SCD\OLE DB Source.Outputs[OLE DB Source Output].Columns[id]"
-                      name="id"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\SCD\OLE DB Source.Outputs[OLE DB Source Output].Columns[isbn]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\SCD\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[isbn]"
-                      length="255"
-                      lineageId="Package\SCD\OLE DB Source.Outputs[OLE DB Source Output].Columns[isbn]"
-                      name="isbn"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\SCD\OLE DB Source.Outputs[OLE DB Source Output].Columns[book_title]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\SCD\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[book_title]"
-                      length="255"
-                      lineageId="Package\SCD\OLE DB Source.Outputs[OLE DB Source Output].Columns[book_title]"
-                      name="book_title"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\SCD\OLE DB Source.Outputs[OLE DB Source Output].Columns[book_author]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\SCD\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[book_author]"
-                      length="255"
-                      lineageId="Package\SCD\OLE DB Source.Outputs[OLE DB Source Output].Columns[book_author]"
-                      name="book_author"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\SCD\OLE DB Source.Outputs[OLE DB Source Output].Columns[year_of_publication]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\SCD\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[year_of_publication]"
-                      length="255"
-                      lineageId="Package\SCD\OLE DB Source.Outputs[OLE DB Source Output].Columns[year_of_publication]"
-                      name="year_of_publication"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\SCD\OLE DB Source.Outputs[OLE DB Source Output].Columns[publisher]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\SCD\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[publisher]"
-                      length="255"
-                      lineageId="Package\SCD\OLE DB Source.Outputs[OLE DB Source Output].Columns[publisher]"
-                      name="publisher"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\SCD\OLE DB Source.Outputs[OLE DB Source Output].Columns[Language]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\SCD\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Language]"
-                      length="255"
-                      lineageId="Package\SCD\OLE DB Source.Outputs[OLE DB Source Output].Columns[Language]"
-                      name="Language"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\SCD\OLE DB Source.Outputs[OLE DB Source Output].Columns[Category]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\SCD\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Category]"
-                      length="255"
-                      lineageId="Package\SCD\OLE DB Source.Outputs[OLE DB Source Output].Columns[Category]"
-                      name="Category"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\SCD\OLE DB Source.Outputs[OLE DB Source Output].Columns[Status]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\SCD\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Status]"
-                      length="255"
-                      lineageId="Package\SCD\OLE DB Source.Outputs[OLE DB Source Output].Columns[Status]"
-                      name="Status"
-                      truncationRowDisposition="FailComponent" />
-                  </outputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\SCD\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[id]"
-                      dataType="i4"
-                      name="id" />
-                    <externalMetadataColumn
-                      refId="Package\SCD\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[isbn]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      name="isbn" />
-                    <externalMetadataColumn
-                      refId="Package\SCD\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[book_title]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      name="book_title" />
-                    <externalMetadataColumn
-                      refId="Package\SCD\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[book_author]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      name="book_author" />
-                    <externalMetadataColumn
-                      refId="Package\SCD\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[year_of_publication]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      name="year_of_publication" />
-                    <externalMetadataColumn
-                      refId="Package\SCD\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[publisher]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      name="publisher" />
-                    <externalMetadataColumn
-                      refId="Package\SCD\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Language]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      name="Language" />
-                    <externalMetadataColumn
-                      refId="Package\SCD\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Category]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      name="Category" />
-                    <externalMetadataColumn
-                      refId="Package\SCD\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Status]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      name="Status" />
-                  </externalMetadataColumns>
-                </output>
-                <output
-                  refId="Package\SCD\OLE DB Source.Outputs[OLE DB Source Error Output]"
-                  isErrorOut="true"
-                  name="OLE DB Source Error Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\SCD\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[id]"
-                      dataType="i4"
-                      lineageId="Package\SCD\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[id]"
-                      name="id" />
-                    <outputColumn
-                      refId="Package\SCD\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[isbn]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      lineageId="Package\SCD\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[isbn]"
-                      name="isbn" />
-                    <outputColumn
-                      refId="Package\SCD\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[book_title]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      lineageId="Package\SCD\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[book_title]"
-                      name="book_title" />
-                    <outputColumn
-                      refId="Package\SCD\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[book_author]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      lineageId="Package\SCD\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[book_author]"
-                      name="book_author" />
-                    <outputColumn
-                      refId="Package\SCD\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[year_of_publication]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      lineageId="Package\SCD\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[year_of_publication]"
-                      name="year_of_publication" />
-                    <outputColumn
-                      refId="Package\SCD\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[publisher]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      lineageId="Package\SCD\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[publisher]"
-                      name="publisher" />
-                    <outputColumn
-                      refId="Package\SCD\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Language]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      lineageId="Package\SCD\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Language]"
-                      name="Language" />
-                    <outputColumn
-                      refId="Package\SCD\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Category]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      lineageId="Package\SCD\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Category]"
-                      name="Category" />
-                    <outputColumn
-                      refId="Package\SCD\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Status]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      lineageId="Package\SCD\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Status]"
-                      name="Status" />
-                    <outputColumn
-                      refId="Package\SCD\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\SCD\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\SCD\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\SCD\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\SCD\Slowly Changing Dimension"
-              componentClassID="Microsoft.SCD"
-              contactInfo="Slowly Changing Dimension;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;3"
-              description="Updates a SQL Server Analysis Services data warehouse dimension. Update dimension records that are already present and  insert dimension records that aren't. For example, update the DimProduct table of the AdventureWorksDW OLAP database with data from the Products table in the AdventureWorks OLTP database."
-              name="Slowly Changing Dimension"
-              version="3">
-              <properties>
-                <property
-                  dataType="System.String"
-                  description="Specifies the SELECT statement used to create a schema rowset."
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT [book_author], [book_title], [Category], [isbn], [Language], [publisher], [Status], [year_of_publication] FROM [dbo].[Books2]</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the WHERE clause in the SELECT statement that selects the current row among rows with identical business keys."
-                  name="CurrentRowWhere">[Status] = 'Current'</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether historical attribute updates are directed to the transformation output for changing attribute updates."
-                  name="UpdateChangingAttributeHistory">false</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the transformation fails when columns with fixed attributes contain changes."
-                  name="FailOnFixedAttributeChange">true</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the column name for the inferred member."
-                  name="InferredMemberIndicator"></property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether inferred member updates are detected."
-                  name="EnableInferredMember">false</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the transformation fails when a lookup of an existing record fails."
-                  name="FailOnLookupFailure">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies that all rows in the input are new or the transformation detects the change type."
-                  name="IncomingRowChangeType"
-                  typeConverter="IncomingRowChangeType">1</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\SCD\Slowly Changing Dimension.Connections[LookupConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-1NBNSDK\SQLEXPRESS.DataWarehouse]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-1NBNSDK\SQLEXPRESS.DataWarehouse]"
-                  description="Defines the connection to use for lookups in the dimension table"
-                  name="LookupConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\SCD\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]"
-                  name="Slowly Changing Dimension Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\SCD\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].Columns[book_author]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="book_author"
-                      externalMetadataColumnId="Package\SCD\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[book_author]"
-                      lineageId="Package\SCD\OLE DB Source.Outputs[OLE DB Source Output].Columns[book_author]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          name="ColumnType"
-                          typeConverter="ColumnType">3</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\SCD\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].Columns[book_title]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="book_title"
-                      externalMetadataColumnId="Package\SCD\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[book_title]"
-                      lineageId="Package\SCD\OLE DB Source.Outputs[OLE DB Source Output].Columns[book_title]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          name="ColumnType"
-                          typeConverter="ColumnType">3</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\SCD\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].Columns[Category]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="Category"
-                      externalMetadataColumnId="Package\SCD\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[Category]"
-                      lineageId="Package\SCD\OLE DB Source.Outputs[OLE DB Source Output].Columns[Category]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          name="ColumnType"
-                          typeConverter="ColumnType">3</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\SCD\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].Columns[isbn]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="isbn"
-                      externalMetadataColumnId="Package\SCD\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[isbn]"
-                      lineageId="Package\SCD\OLE DB Source.Outputs[OLE DB Source Output].Columns[isbn]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          name="ColumnType"
-                          typeConverter="ColumnType">1</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\SCD\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].Columns[Language]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="Language"
-                      externalMetadataColumnId="Package\SCD\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[Language]"
-                      lineageId="Package\SCD\OLE DB Source.Outputs[OLE DB Source Output].Columns[Language]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          name="ColumnType"
-                          typeConverter="ColumnType">3</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\SCD\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].Columns[publisher]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="publisher"
-                      externalMetadataColumnId="Package\SCD\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[publisher]"
-                      lineageId="Package\SCD\OLE DB Source.Outputs[OLE DB Source Output].Columns[publisher]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          name="ColumnType"
-                          typeConverter="ColumnType">3</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\SCD\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].Columns[year_of_publication]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="year_of_publication"
-                      externalMetadataColumnId="Package\SCD\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[year_of_publication]"
-                      lineageId="Package\SCD\OLE DB Source.Outputs[OLE DB Source Output].Columns[year_of_publication]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          name="ColumnType"
-                          typeConverter="ColumnType">3</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\SCD\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].Columns[Status]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="Status"
-                      externalMetadataColumnId="Package\SCD\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[Status]"
-                      lineageId="Package\SCD\OLE DB Source.Outputs[OLE DB Source Output].Columns[Status]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          name="ColumnType"
-                          typeConverter="ColumnType">0</property>
-                      </properties>
-                    </inputColumn>
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\SCD\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[book_author]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      name="book_author" />
-                    <externalMetadataColumn
-                      refId="Package\SCD\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[book_title]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      name="book_title" />
-                    <externalMetadataColumn
-                      refId="Package\SCD\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[Category]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      name="Category" />
-                    <externalMetadataColumn
-                      refId="Package\SCD\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[isbn]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      name="isbn" />
-                    <externalMetadataColumn
-                      refId="Package\SCD\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[Language]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      name="Language" />
-                    <externalMetadataColumn
-                      refId="Package\SCD\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[publisher]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      name="publisher" />
-                    <externalMetadataColumn
-                      refId="Package\SCD\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[Status]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      name="Status" />
-                    <externalMetadataColumn
-                      refId="Package\SCD\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[year_of_publication]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      name="year_of_publication" />
-                  </externalMetadataColumns>
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\SCD\Slowly Changing Dimension.Outputs[Unchanged Output]"
-                  description="Unchanged rows"
-                  exclusionGroup="1"
-                  name="Unchanged Output"
-                  synchronousInputId="Package\SCD\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]">
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\SCD\Slowly Changing Dimension.Outputs[New Output]"
-                  description="New rows"
-                  exclusionGroup="1"
-                  name="New Output"
-                  synchronousInputId="Package\SCD\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]">
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\SCD\Slowly Changing Dimension.Outputs[Fixed Attribute Output]"
-                  description="Rows with changes in columns tagged FixedAttribute"
-                  exclusionGroup="1"
-                  name="Fixed Attribute Output"
-                  synchronousInputId="Package\SCD\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]">
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\SCD\Slowly Changing Dimension.Outputs[Changing Attribute Updates Output]"
-                  description="These rows contain new information for ChangingAttribute (Type 1) column changes"
-                  exclusionGroup="1"
-                  name="Changing Attribute Updates Output"
-                  synchronousInputId="Package\SCD\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]">
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\SCD\Slowly Changing Dimension.Outputs[Historical Attribute Inserts Output]"
-                  description="HistoricalAttribute (Type 2) changes result in these new rows"
-                  exclusionGroup="2"
-                  name="Historical Attribute Inserts Output"
-                  synchronousInputId="Package\SCD\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]">
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\SCD\Slowly Changing Dimension.Outputs[Inferred Member Updates Output]"
-                  description="Information to update unpopulated initial dimension row"
-                  exclusionGroup="1"
-                  name="Inferred Member Updates Output"
-                  synchronousInputId="Package\SCD\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]">
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\SCD\Union All"
-              componentClassID="Microsoft.UnionAll"
-              contactInfo="Union All;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
-              description="Combines rows from multiple data flows without sorting. For example, add rows back to a data flow after correction of errors. If sorting is important, we recommend using the Merge transformation."
-              name="Union All"
-              version="1">
-              <inputs>
-                <input
-                  refId="Package\SCD\Union All.Inputs[Union All Input 1]"
-                  name="Union All Input 1">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\SCD\Union All.Inputs[Union All Input 1].Columns[id]"
-                      cachedDataType="i4"
-                      cachedName="id"
-                      lineageId="Package\SCD\OLE DB Source.Outputs[OLE DB Source Output].Columns[id]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\SCD\Union All.Outputs[Union All Output 1].Columns[id]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\SCD\Union All.Inputs[Union All Input 1].Columns[isbn]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="isbn"
-                      lineageId="Package\SCD\OLE DB Source.Outputs[OLE DB Source Output].Columns[isbn]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\SCD\Union All.Outputs[Union All Output 1].Columns[isbn]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\SCD\Union All.Inputs[Union All Input 1].Columns[book_title]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="book_title"
-                      lineageId="Package\SCD\OLE DB Source.Outputs[OLE DB Source Output].Columns[book_title]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\SCD\Union All.Outputs[Union All Output 1].Columns[book_title]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\SCD\Union All.Inputs[Union All Input 1].Columns[book_author]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="book_author"
-                      lineageId="Package\SCD\OLE DB Source.Outputs[OLE DB Source Output].Columns[book_author]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\SCD\Union All.Outputs[Union All Output 1].Columns[book_author]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\SCD\Union All.Inputs[Union All Input 1].Columns[year_of_publication]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="year_of_publication"
-                      lineageId="Package\SCD\OLE DB Source.Outputs[OLE DB Source Output].Columns[year_of_publication]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\SCD\Union All.Outputs[Union All Output 1].Columns[year_of_publication]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\SCD\Union All.Inputs[Union All Input 1].Columns[publisher]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="publisher"
-                      lineageId="Package\SCD\OLE DB Source.Outputs[OLE DB Source Output].Columns[publisher]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\SCD\Union All.Outputs[Union All Output 1].Columns[publisher]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\SCD\Union All.Inputs[Union All Input 1].Columns[Language]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="Language"
-                      lineageId="Package\SCD\OLE DB Source.Outputs[OLE DB Source Output].Columns[Language]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\SCD\Union All.Outputs[Union All Output 1].Columns[Language]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\SCD\Union All.Inputs[Union All Input 1].Columns[Category]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="Category"
-                      lineageId="Package\SCD\OLE DB Source.Outputs[OLE DB Source Output].Columns[Category]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\SCD\Union All.Outputs[Union All Output 1].Columns[Category]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\SCD\Union All.Inputs[Union All Input 1].Columns[Status]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="Status"
-                      lineageId="Package\SCD\OLE DB Source.Outputs[OLE DB Source Output].Columns[Status]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\SCD\Union All.Outputs[Union All Output 1].Columns[Status]}</property>
-                      </properties>
-                    </inputColumn>
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-                <input
-                  refId="Package\SCD\Union All.Inputs[Union All Input 2]"
-                  hasSideEffects="true"
-                  name="Union All Input 2">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\SCD\Union All.Inputs[Union All Input 2].Columns[id]"
-                      cachedDataType="i4"
-                      cachedName="id"
-                      lineageId="Package\SCD\OLE DB Source.Outputs[OLE DB Source Output].Columns[id]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\SCD\Union All.Outputs[Union All Output 1].Columns[id]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\SCD\Union All.Inputs[Union All Input 2].Columns[isbn]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="isbn"
-                      lineageId="Package\SCD\OLE DB Source.Outputs[OLE DB Source Output].Columns[isbn]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\SCD\Union All.Outputs[Union All Output 1].Columns[isbn]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\SCD\Union All.Inputs[Union All Input 2].Columns[book_title]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="book_title"
-                      lineageId="Package\SCD\OLE DB Source.Outputs[OLE DB Source Output].Columns[book_title]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\SCD\Union All.Outputs[Union All Output 1].Columns[book_title]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\SCD\Union All.Inputs[Union All Input 2].Columns[book_author]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="book_author"
-                      lineageId="Package\SCD\OLE DB Source.Outputs[OLE DB Source Output].Columns[book_author]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\SCD\Union All.Outputs[Union All Output 1].Columns[book_author]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\SCD\Union All.Inputs[Union All Input 2].Columns[year_of_publication]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="year_of_publication"
-                      lineageId="Package\SCD\OLE DB Source.Outputs[OLE DB Source Output].Columns[year_of_publication]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\SCD\Union All.Outputs[Union All Output 1].Columns[year_of_publication]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\SCD\Union All.Inputs[Union All Input 2].Columns[publisher]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="publisher"
-                      lineageId="Package\SCD\OLE DB Source.Outputs[OLE DB Source Output].Columns[publisher]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\SCD\Union All.Outputs[Union All Output 1].Columns[publisher]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\SCD\Union All.Inputs[Union All Input 2].Columns[Language]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="Language"
-                      lineageId="Package\SCD\OLE DB Source.Outputs[OLE DB Source Output].Columns[Language]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\SCD\Union All.Outputs[Union All Output 1].Columns[Language]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\SCD\Union All.Inputs[Union All Input 2].Columns[Category]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="Category"
-                      lineageId="Package\SCD\OLE DB Source.Outputs[OLE DB Source Output].Columns[Category]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\SCD\Union All.Outputs[Union All Output 1].Columns[Category]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\SCD\Union All.Inputs[Union All Input 2].Columns[Status]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="Status"
-                      lineageId="Package\SCD\OLE DB Source.Outputs[OLE DB Source Output].Columns[Status]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\SCD\Union All.Outputs[Union All Output 1].Columns[Status]}</property>
-                      </properties>
-                    </inputColumn>
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-                <input
-                  refId="Package\SCD\Union All.Inputs[Union All Input 3]"
-                  dangling="true"
-                  hasSideEffects="true"
-                  name="Union All Input 3">
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\SCD\Union All.Outputs[Union All Output 1]"
-                  name="Union All Output 1">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\SCD\Union All.Outputs[Union All Output 1].Columns[id]"
-                      dataType="i4"
-                      lineageId="Package\SCD\Union All.Outputs[Union All Output 1].Columns[id]"
-                      name="id" />
-                    <outputColumn
-                      refId="Package\SCD\Union All.Outputs[Union All Output 1].Columns[isbn]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      lineageId="Package\SCD\Union All.Outputs[Union All Output 1].Columns[isbn]"
-                      name="isbn" />
-                    <outputColumn
-                      refId="Package\SCD\Union All.Outputs[Union All Output 1].Columns[book_title]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      lineageId="Package\SCD\Union All.Outputs[Union All Output 1].Columns[book_title]"
-                      name="book_title" />
-                    <outputColumn
-                      refId="Package\SCD\Union All.Outputs[Union All Output 1].Columns[book_author]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      lineageId="Package\SCD\Union All.Outputs[Union All Output 1].Columns[book_author]"
-                      name="book_author" />
-                    <outputColumn
-                      refId="Package\SCD\Union All.Outputs[Union All Output 1].Columns[year_of_publication]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      lineageId="Package\SCD\Union All.Outputs[Union All Output 1].Columns[year_of_publication]"
-                      name="year_of_publication" />
-                    <outputColumn
-                      refId="Package\SCD\Union All.Outputs[Union All Output 1].Columns[publisher]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      lineageId="Package\SCD\Union All.Outputs[Union All Output 1].Columns[publisher]"
-                      name="publisher" />
-                    <outputColumn
-                      refId="Package\SCD\Union All.Outputs[Union All Output 1].Columns[Language]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      lineageId="Package\SCD\Union All.Outputs[Union All Output 1].Columns[Language]"
-                      name="Language" />
-                    <outputColumn
-                      refId="Package\SCD\Union All.Outputs[Union All Output 1].Columns[Category]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      lineageId="Package\SCD\Union All.Outputs[Union All Output 1].Columns[Category]"
-                      name="Category" />
-                    <outputColumn
-                      refId="Package\SCD\Union All.Outputs[Union All Output 1].Columns[Status]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      lineageId="Package\SCD\Union All.Outputs[Union All Output 1].Columns[Status]"
-                      name="Status" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-          </components>
-          <paths>
-            <path
-              refId="Package\SCD.Paths[Derived Column Output]"
-              endId="Package\SCD\OLE DB Command.Inputs[OLE DB Command Input]"
-              name="Derived Column Output"
-              startId="Package\SCD\Derived Column.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\SCD.Paths[Derived Column Output1]"
-              endId="Package\SCD\Insert Destination.Inputs[OLE DB Destination Input]"
-              name="Derived Column Output"
-              startId="Package\SCD\Derived Column 1.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\SCD.Paths[Historical Attribute Inserts Output]"
-              endId="Package\SCD\Derived Column.Inputs[Derived Column Input]"
-              name="Historical Attribute Inserts Output"
-              startId="Package\SCD\Slowly Changing Dimension.Outputs[Historical Attribute Inserts Output]" />
-            <path
-              refId="Package\SCD.Paths[New Output]"
-              endId="Package\SCD\Union All.Inputs[Union All Input 1]"
-              name="New Output"
-              startId="Package\SCD\Slowly Changing Dimension.Outputs[New Output]" />
-            <path
-              refId="Package\SCD.Paths[OLE DB Command Output]"
-              endId="Package\SCD\Union All.Inputs[Union All Input 2]"
-              name="OLE DB Command Output"
-              startId="Package\SCD\OLE DB Command.Outputs[OLE DB Command Output]" />
-            <path
-              refId="Package\SCD.Paths[OLE DB Source Output]"
-              endId="Package\SCD\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]"
-              name="OLE DB Source Output"
-              startId="Package\SCD\OLE DB Source.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\SCD.Paths[Union All Output 1]"
-              endId="Package\SCD\Derived Column 1.Inputs[Derived Column Input]"
-              name="Union All Output 1"
-              startId="Package\SCD\Union All.Outputs[Union All Output 1]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -6952,14 +5456,6 @@ where [refTable].[id] = ?</property>
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 5"
       DTS:To="Package\Fact" />
-    <DTS:PrecedenceConstraint
-      DTS:refId="Package.PrecedenceConstraints[Constraint 6]"
-      DTS:CreationName=""
-      DTS:DTSID="{5500E14D-F49D-486A-AD36-DB0CE13ED8D6}"
-      DTS:From="Package\Fact"
-      DTS:LogicalAnd="True"
-      DTS:ObjectName="Constraint 6"
-      DTS:To="Package\SCD" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -6997,10 +5493,6 @@ where [refTable].[id] = ?</property>
           Size="98.4,41.6"
           Id="Package\Fact"
           TopLeft="156.964288387372,397.45588792711" />
-        <NodeLayout
-          Size="97.6,41.6"
-          Id="Package\SCD"
-          TopLeft="357.142863224964,439.4647120008" />
         <NodeLayout
           Size="139.2,41.6"
           Id="Package\Staging Task"
@@ -7108,6 +5600,40 @@ where [refTable].[id] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="456.000006301063,219.094118408514">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-282.857147333574,43.964708810198"
+              Start="0,0"
+              End="-282.857147333574,36.464708810198">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17.982354405099" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,17.982354405099"
+                    Point2="0,21.982354405099"
+                    Point3="-4,21.982354405099" />
+                  <mssgle:LineSegment
+                    End="-278.857147333574,21.982354405099" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-278.857147333574,21.982354405099"
+                    Point2="-282.857147333574,21.982354405099"
+                    Point3="-282.857147333574,25.982354405099" />
+                  <mssgle:LineSegment
+                    End="-282.857147333574,36.464708810198" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 4]"
           TopLeft="239.142858967489,289.458827218712">
           <EdgeLayout.Curve>
@@ -7175,74 +5701,6 @@ where [refTable].[id] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 3]"
-          TopLeft="456.000006301063,219.094118408514">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-282.857147333574,43.964708810198"
-              Start="0,0"
-              End="-282.857147333574,36.464708810198">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,17.982354405099" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,17.982354405099"
-                    Point2="0,21.982354405099"
-                    Point3="-4,21.982354405099" />
-                  <mssgle:LineSegment
-                    End="-278.857147333574,21.982354405099" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-278.857147333574,21.982354405099"
-                    Point2="-282.857147333574,21.982354405099"
-                    Point3="-282.857147333574,25.982354405099" />
-                  <mssgle:LineSegment
-                    End="-282.857147333574,36.464708810198" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 6]"
-          TopLeft="255.364288387372,418.25588792711">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="101.778574837592,42.0088240736904"
-              Start="0,0"
-              End="94.2785748375917,42.0088240736904">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="46.8892874187959,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="46.8892874187959,0"
-                    Point2="50.8892874187959,0"
-                    Point3="50.8892874187959,4" />
-                  <mssgle:LineSegment
-                    End="50.8892874187959,38.0088240736904" />
-                  <mssgle:CubicBezierSegment
-                    Point1="50.8892874187959,38.0088240736904"
-                    Point2="50.8892874187959,42.0088240736904"
-                    Point3="54.8892874187959,42.0088240736904" />
-                  <mssgle:LineSegment
-                    End="94.2785748375917,42.0088240736904" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -7250,7 +5708,7 @@ where [refTable].[id] = ?</property>
     design-time-name="Package\Dimensions">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="120,41.6"
           Id="Package\Dimensions\Multicast"
@@ -7286,9 +5744,7 @@ where [refTable].[id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7322,9 +5778,7 @@ where [refTable].[id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7358,9 +5812,7 @@ where [refTable].[id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -7396,7 +5848,7 @@ where [refTable].[id] = ?</property>
     design-time-name="Package\Edit Dimensions">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="97.6,41.6"
           Id="Package\Edit Dimensions\Sort"
@@ -7460,9 +5912,7 @@ where [refTable].[id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7496,9 +5946,7 @@ where [refTable].[id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7532,9 +5980,7 @@ where [refTable].[id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7568,9 +6014,7 @@ where [refTable].[id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7604,9 +6048,7 @@ where [refTable].[id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7640,9 +6082,7 @@ where [refTable].[id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -8034,7 +6474,7 @@ where [refTable].[id] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -8044,7 +6484,7 @@ where [refTable].[id] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -8057,7 +6497,7 @@ where [refTable].[id] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -8103,7 +6543,7 @@ where [refTable].[id] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -8113,7 +6553,7 @@ where [refTable].[id] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -8126,7 +6566,7 @@ where [refTable].[id] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -8136,7 +6576,7 @@ where [refTable].[id] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -8188,335 +6628,10 @@ where [refTable].[id] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <TaskHost
-    design-time-name="Package\SCD">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="208,41.6"
-          Id="Package\SCD\Slowly Changing Dimension"
-          TopLeft="126.9,107.1" />
-        <NodeLayout
-          Size="149.6,41.6"
-          Id="Package\SCD\OLE DB Source"
-          TopLeft="156.1,5.49999999999995" />
-        <EdgeLayout
-          Id="Package\SCD.Paths[OLE DB Source Output]"
-          TopLeft="230.9,47.1">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,59.9999999999999"
-              Start="0,0"
-              End="0,52.4999999999999">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.4999999999999" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="152.8,41.6"
-          Id="Package\SCD\Derived Column"
-          TopLeft="17.5,208.7" />
-        <EdgeLayout
-          Id="Package\SCD.Paths[Historical Attribute Inserts Output]"
-          TopLeft="197.566666666667,148.7">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-103.666666666667,59.9999999999999"
-              Start="0,0"
-              End="-103.666666666667,52.4999999999999">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,20.2748091603053" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,20.2748091603053"
-                    Point2="0,24.2748091603053"
-                    Point3="-4,24.2748091603053" />
-                  <mssgle:LineSegment
-                    End="-99.6666666666667,24.2748091603053" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-99.6666666666667,24.2748091603053"
-                    Point2="-103.666666666667,24.2748091603053"
-                    Point3="-103.666666666667,28.2748091603053" />
-                  <mssgle:LineSegment
-                    End="-103.666666666667,52.4999999999999" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-126.889720052083,29.2748091603053,150.1127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="164.8,41.6"
-          Id="Package\SCD\OLE DB Command"
-          TopLeft="5.50000000000003,310.3" />
-        <EdgeLayout
-          Id="Package\SCD.Paths[Derived Column Output]"
-          TopLeft="90.9,250.3">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,59.9999999999999"
-              Start="0,0"
-              End="0,52.4999999999999">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.4999999999999" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="120,41.6"
-          Id="Package\SCD\Union All"
-          TopLeft="170.9,411.9" />
-        <EdgeLayout
-          Id="Package\SCD.Paths[New Output]"
-          TopLeft="264.233333333333,148.7">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-14.6666666666666,263.2"
-              Start="0,0"
-              End="-14.6666666666666,255.7">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,126.695815115553" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,126.695815115553"
-                    Point2="0,130.695815115553"
-                    Point3="-4,130.695815115553" />
-                  <mssgle:LineSegment
-                    End="-10.6666666666666,130.695815115553" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-10.6666666666666,130.695815115553"
-                    Point2="-14.6666666666666,130.695815115553"
-                    Point3="-14.6666666666666,134.695815115553" />
-                  <mssgle:LineSegment
-                    End="-14.6666666666666,255.7" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-34.4247200520833,135.695815115553,54.1827734375,11.43359375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\SCD.Paths[OLE DB Command Output]"
-          TopLeft="87.9,351.9">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="124.333333333333,59.9999999999999"
-              Start="0,0"
-              End="124.333333333333,52.4999999999999">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,31.5263157894736" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,31.5263157894736"
-                    Point2="0,35.5263157894736"
-                    Point3="4,35.5263157894736" />
-                  <mssgle:LineSegment
-                    End="120.333333333333,35.5263157894736" />
-                  <mssgle:CubicBezierSegment
-                    Point1="120.333333333333,35.5263157894736"
-                    Point2="124.333333333333,35.5263157894736"
-                    Point3="124.333333333333,39.5263157894736" />
-                  <mssgle:LineSegment
-                    End="124.333333333333,52.4999999999999" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="162.4,41.6"
-          Id="Package\SCD\Derived Column 1"
-          TopLeft="149.7,513.5" />
-        <EdgeLayout
-          Id="Package\SCD.Paths[Union All Output 1]"
-          TopLeft="230.9,453.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,59.9999999999999"
-              Start="0,0"
-              End="0,52.4999999999999">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.4999999999999" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="162.4,41.6"
-          Id="Package\SCD\Insert Destination"
-          TopLeft="149.7,615.099999999999" />
-        <EdgeLayout
-          Id="Package\SCD.Paths[Derived Column Output1]"
-          TopLeft="230.9,555.1">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,59.9999999999999"
-              Start="0,0"
-              End="0,52.4999999999999">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.4999999999999" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\SCD\Slowly Changing Dimension">
-    <Properties>
-      <Property>
-        <Name>SCDMetadata</Name>
-        <Value
-          type="q2:string">&lt;?xml version="1.0" encoding="utf-16"?&gt;
-&lt;SCDWizardMetadata xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionID&gt;{CCAC4249-C618-4450-B487-FF9F7912DB76}&lt;/ConnectionID&gt;
-  &lt;TableName&gt;[dbo].[Books2]&lt;/TableName&gt;
-  &lt;InputToColumnsCollection&gt;
-    &lt;InputColumnToDBColumn&gt;
-      &lt;IdentificationString&gt;OLE DB Source.Outputs[OLE DB Source Output].Columns[book_author]&lt;/IdentificationString&gt;
-      &lt;ColumnName&gt;book_author&lt;/ColumnName&gt;
-      &lt;KeyType&gt;None&lt;/KeyType&gt;
-      &lt;ChangeType&gt;HistoricalAttribute&lt;/ChangeType&gt;
-    &lt;/InputColumnToDBColumn&gt;
-    &lt;InputColumnToDBColumn&gt;
-      &lt;IdentificationString&gt;OLE DB Source.Outputs[OLE DB Source Output].Columns[book_title]&lt;/IdentificationString&gt;
-      &lt;ColumnName&gt;book_title&lt;/ColumnName&gt;
-      &lt;KeyType&gt;None&lt;/KeyType&gt;
-      &lt;ChangeType&gt;HistoricalAttribute&lt;/ChangeType&gt;
-    &lt;/InputColumnToDBColumn&gt;
-    &lt;InputColumnToDBColumn&gt;
-      &lt;IdentificationString&gt;OLE DB Source.Outputs[OLE DB Source Output].Columns[Category]&lt;/IdentificationString&gt;
-      &lt;ColumnName&gt;Category&lt;/ColumnName&gt;
-      &lt;KeyType&gt;None&lt;/KeyType&gt;
-      &lt;ChangeType&gt;HistoricalAttribute&lt;/ChangeType&gt;
-    &lt;/InputColumnToDBColumn&gt;
-    &lt;InputColumnToDBColumn&gt;
-      &lt;IdentificationString&gt;OLE DB Source.Outputs[OLE DB Source Output].Columns[isbn]&lt;/IdentificationString&gt;
-      &lt;ColumnName&gt;isbn&lt;/ColumnName&gt;
-      &lt;KeyType&gt;BusinessKey&lt;/KeyType&gt;
-      &lt;ChangeType&gt;None&lt;/ChangeType&gt;
-    &lt;/InputColumnToDBColumn&gt;
-    &lt;InputColumnToDBColumn&gt;
-      &lt;IdentificationString&gt;OLE DB Source.Outputs[OLE DB Source Output].Columns[Language]&lt;/IdentificationString&gt;
-      &lt;ColumnName&gt;Language&lt;/ColumnName&gt;
-      &lt;KeyType&gt;None&lt;/KeyType&gt;
-      &lt;ChangeType&gt;HistoricalAttribute&lt;/ChangeType&gt;
-    &lt;/InputColumnToDBColumn&gt;
-    &lt;InputColumnToDBColumn&gt;
-      &lt;IdentificationString&gt;OLE DB Source.Outputs[OLE DB Source Output].Columns[publisher]&lt;/IdentificationString&gt;
-      &lt;ColumnName&gt;publisher&lt;/ColumnName&gt;
-      &lt;KeyType&gt;None&lt;/KeyType&gt;
-      &lt;ChangeType&gt;HistoricalAttribute&lt;/ChangeType&gt;
-    &lt;/InputColumnToDBColumn&gt;
-    &lt;InputColumnToDBColumn&gt;
-      &lt;IdentificationString&gt;OLE DB Source.Outputs[OLE DB Source Output].Columns[Status]&lt;/IdentificationString&gt;
-      &lt;ColumnName&gt;Status&lt;/ColumnName&gt;
-      &lt;KeyType&gt;None&lt;/KeyType&gt;
-      &lt;ChangeType&gt;None&lt;/ChangeType&gt;
-    &lt;/InputColumnToDBColumn&gt;
-    &lt;InputColumnToDBColumn&gt;
-      &lt;IdentificationString&gt;OLE DB Source.Outputs[OLE DB Source Output].Columns[year_of_publication]&lt;/IdentificationString&gt;
-      &lt;ColumnName&gt;year_of_publication&lt;/ColumnName&gt;
-      &lt;KeyType&gt;None&lt;/KeyType&gt;
-      &lt;ChangeType&gt;HistoricalAttribute&lt;/ChangeType&gt;
-    &lt;/InputColumnToDBColumn&gt;
-  &lt;/InputToColumnsCollection&gt;
-  &lt;GeneratedComponentsIdentificationStrings&gt;
-    &lt;anyType xsi:type="xsd:string"&gt;Derived Column&lt;/anyType&gt;
-    &lt;anyType xsi:type="xsd:string"&gt;OLE DB Command&lt;/anyType&gt;
-    &lt;anyType xsi:type="xsd:string"&gt;Union All&lt;/anyType&gt;
-    &lt;anyType xsi:type="xsd:string"&gt;Derived Column 1&lt;/anyType&gt;
-    &lt;anyType xsi:type="xsd:string"&gt;Insert Destination&lt;/anyType&gt;
-  &lt;/GeneratedComponentsIdentificationStrings&gt;
-  &lt;FailFixedAttribute&gt;true&lt;/FailFixedAttribute&gt;
-  &lt;FailChangeAttribute&gt;false&lt;/FailChangeAttribute&gt;
-  &lt;UseStartEndDate&gt;false&lt;/UseStartEndDate&gt;
-  &lt;CurrentIndicatorColumn&gt;Status&lt;/CurrentIndicatorColumn&gt;
-  &lt;InferredIndicatorColumn /&gt;
-  &lt;ValueCurrent&gt;Current&lt;/ValueCurrent&gt;
-  &lt;ValueExpired&gt;Expired&lt;/ValueExpired&gt;
-  &lt;StartDateColumn&gt;Start Date&lt;/StartDateColumn&gt;
-  &lt;EndDateColumn&gt;End Date&lt;/EndDateColumn&gt;
-  &lt;DateVariable&gt;System::CreationDate&lt;/DateVariable&gt;
-  &lt;EnableInferredSupport&gt;false&lt;/EnableInferredSupport&gt;
-&lt;/SCDWizardMetadata&gt;</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\SCD\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
     design-time-name="Package\Staging Task">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="170.4,41.6"
           Id="Package\Staging Task\OLE DB Destination"
@@ -8556,9 +6671,7 @@ where [refTable].[id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
